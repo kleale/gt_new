@@ -53,6 +53,9 @@ var path = {
     img: 'src/img/**/*.*',
     fonts: 'src/fonts/**/*.*'
   },
+  assets: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
+    css: 'src/assets/css/**/*.*'
+  },
   clean: './build/'
 };
 
@@ -115,7 +118,6 @@ gulp.task('style:build', function () {
     .pipe(postcss(processors))
     .pipe(gulp.dest(path.build.css)) //И в build
     .pipe(reload({ stream: true })); //И перезагрузим сервер
-
 });
 
 // Удалить ненужные стили

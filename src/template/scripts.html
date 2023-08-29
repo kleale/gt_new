@@ -4,29 +4,25 @@
 
 <!--PAGES select only dev-->
 <style>
-  body {
-    padding-bottom: 60px !important;
-  }
   .project-menu {
     position: fixed;
     z-index: 1000;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.9);
-    padding: 5px;
-    border-radius: 5px 0px 0px 0px;
-    /*display: none;*/
-  }
-  .project-menu a {
-    font-size: 10px;
+    bottom: 5px;
+    left: 5px;
   }
 </style>
 <div class="project-menu">
   <div class="btn-group" role="group" id="hpages">
-    <a href="./external.html" class="m2 btn btn-sm btn-warning">external</a>
-
+    <div class="dropup">
+      <button class="btn btn-default btn-sm dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Страницы
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./external.html">external</a></li>
+      </ul>
+    </div>
   </div>
 </div>
 
