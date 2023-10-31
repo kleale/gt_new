@@ -41,6 +41,7 @@ var path = {
   },
   src: { //Пути откуда брать исходники
     html: 'src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
+    tpl: 'src/*.tpl',
     js: 'src/inc/main.js',//В стилях и скриптах нам понадобятся только main файлы
     style: 'src/css/main.css',
     img: 'src/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
@@ -71,7 +72,7 @@ var config = {
 
 //  Сборка HTML
 gulp.task('html:build', function (done) {
-  gulp.src(path.src.html)
+  gulp.src(path.src.tpl)
     .pipe(twig({
       data: {
         titleDemo: 'Gulp and Twig',
