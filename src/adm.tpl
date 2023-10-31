@@ -3,11 +3,13 @@
 <!DOCTYPE html>
 <html>
   {% include "template/head.tpl" %}
-  <body class="admin">
+  <body class="admin sidebar-mini layout-fixed layout-navbar-fixed">
     <div id="wrapper">
-        {% include 'template/block_menu.tpl' %}
-
-
+        {% include 'template/adm/aside/aside.tpl' %}
+        <div class="content-wrapper">
+          {% include 'template/adm/breadcrumbs.tpl' %}
+          {% include 'template/adm/tours.tpl' %}
+        </div>
     </div>
     {% include "template/scripts.tpl" %}
   </body>

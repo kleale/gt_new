@@ -6,6 +6,7 @@
   "main": "gulpfile.js",
   "scripts": {
     "build": "npm version patch && gulp",
+    "gulp": "gulp",
     "deploy": "gh-pages -d build"
   },
   "repository": {

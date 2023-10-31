@@ -2,11 +2,11 @@
 
 <!DOCTYPE html>
 <html>
-  {% include "template/head.html" %}
+  {% include "template/head.tpl" %}
   <body>
     GT
 
     
-    {% include "template/scripts.html" %}
+    {% include "template/scripts.tpl" %}
   </body>
 </html>

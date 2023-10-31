@@ -1,7 +1,7 @@
 {% set title = "Вы уходите с game-tournaments.com по внешней ссылке" %}
 <!DOCTYPE html>
 <html>
-  {% include "template/head.html" %}
+  {% include "template/head.tpl" %}
   <body class="blockedPage">
     <style>
       html {
@@ -175,6 +175,6 @@
         </div>
       </div>
     </div>
-    {% include "template/scripts.html" %}
+    {% include "template/scripts.tpl" %}
   </body>
 </html>

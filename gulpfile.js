@@ -48,9 +48,9 @@ var path = {
     fonts: 'src/fonts/**/*.*'
   },
   watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
-    html: 'src/**/*.html',
+    html: 'src/**/*.tpl',
     js: 'src/inc/**/*.js',
-    style: 'src/css/**/*.*',
+    style: 'src/**/*.css',
     img: 'src/img/**/*.*',
     fonts: 'src/fonts/**/*.*'
   },
@@ -168,7 +168,7 @@ gulp.task('build',
 // Изменения
 
 gulp.task('watch', function (done) {
-  gulp.watch(path.watch.style, gulp.series('style:build')),
+    gulp.watch(path.watch.style, gulp.series('style:build')),
     gulp.watch(path.watch.html, gulp.series('html:build')),
     gulp.watch(path.watch.js, gulp.series('js:build')),
     gulp.watch(path.watch.img, gulp.series('img:build')),
@@ -192,6 +192,5 @@ gulp.task('clean', function (done) {
 //gulp.task('default', ['build', 'webserver', 'watch']);
 
 // Per default, start scripts and styles - in console "gulp default"
-gulp.task('default', gulp.series('watch', 'build', 'webserver', function (done) { done(); }
-));
+gulp.task('default', gulp.series('watch', 'build', 'webserver', 'watch'));
 
