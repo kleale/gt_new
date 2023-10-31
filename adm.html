@@ -1,0 +1,372 @@
+
+
+<!DOCTYPE html>
+<html>
+  
+<head lang="en">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Доступ с вашего IP-адреса временно ограничен</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,cyrillic" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/png" href="/favicon32.png" />
+  <!-- <link rel="stylesheet" href="/assets/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://game-tournaments.com/assets/css/bootstrap.min.css" />
+
+  <!-- Import main styles -->
+  <link rel="stylesheet" href="https://game-tournaments.com/assets/css/style.min.css?v=v3.7.7" />
+  <link rel="stylesheet" href="https://game-tournaments.com/assets/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/main.css?24" />
+
+  <!--Import jQuery-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <!--<script src="../inc/assets/js/jquery-2.1.1.min.js"></script> -->
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <!-- <script src="../inc/assets/js/bootstrap.min.js"></script>  -->
+</head>
+
+  <body class="admin sidebar-mini layout-fixed layout-navbar-fixed">
+    <div id="wrapper">
+        <aside class="main-sidebar sidebar-dark-primary elevation-4 os-host os-theme-dark os-host-resize-disabled os-host-scrollbar-horizontal-hidden os-host-scrollbar-vertical-hidden os-host-transition">
+
+    <a class="brand-link" href="/">
+      <img src="https://game-tournaments.com/assets/img/logo_gt_footer.png" alt="game tournaments" class="png"><br>adm
+  </a>
+    <div class="sidebar">
+    <div class="user-panel">
+      <div class="info">
+        <span><a class="d-block" href="/dmp_admins/32/edit">adm@esnadm.com</a></span>
+        <span>
+          <a class="btn btn-primary btn-xs" href="/dmp_admins/32/edit"><i class="fa fa-pencil"></i></a>
+          <a class="btn btn-primary btn-xs" rel="nofollow" data-method="delete" href="/logout"><i class="fa fa-sign-out"></i></a>
+        </span>
+      </div>
+    </div>
+    
+    <nav class="mt-2">
+      <ul class="nav nav-pills flex-column" data-accordion="false" data-widget="treeview" id="main-nav" role="menu">
+        <li class="nav-item" id="gt_tournaments-nav"><a class="nav-link active" data-action="click->edit#track_change" href="/gt_tournaments">Турниры</a></li>
+        <li class="nav-item" id="gt_tournaments_stages-nav"><a class="nav-link" data-action="click->edit#track_change" href="/gt_tournaments_stages">Стадии</a></li>
+        <li class="nav-item" id="gt_tournaments_rounds-nav"><a class="nav-link" data-action="click->edit#track_change" href="/gt_tournaments_rounds">Раунды</a></li>
+        <li class="nav-item" id="gt_tournaments_round_tabs-nav"><a class="nav-link" data-action="click->edit#track_change" href="/gt_tournaments_round_tabs">Cубраунды</a></li>
+        <li class="nav-item" id="gt_match_lists-nav"><a class="nav-link" data-action="click->edit#track_change" href="/gt_match_lists">Матчи</a></li>
+        <li class="nav-item" id="esn_news_articles-nav"><a class="nav-link" data-action="click->edit#track_change" href="/esn_news_articles">Новости</a></li>
+        <li class="nav-item" id="esn_top_news_articles-nav"><a class="nav-link" data-action="click->edit#track_change" href="/esn_top_news_articles?page=1">Новости: Топ</a></li>
+        <li class="nav-item" id="esn_news_authors_lists-nav"><a class="nav-link" data-action="click->edit#track_change" href="/esn_news_authors_lists?page=1">Новости: Авторы</a></li>
+        <li class="nav-item" id="api_lol_matches-nav">
+          <a class="nav-link" data-action="click->edit#track_change" href="/api_lol_matches">API: LoL Матчи<span class="right badge badge-danger" data-controller="realtime-partial" data-realtime-partial-key="dmp/api/lol/unbinded_games">110</span></a>
+        </li>
+        <li class="nav-item" id="api_valorant_matches-nav">
+          <a class="nav-link" data-action="click->edit#track_change" href="/api_valorant_matches">API: Valorant Матчи<span class="right badge badge-danger" data-controller="realtime-partial" data-realtime-partial-key="dmp/api/valorant/unbinded_games"></span></a>
+        </li>
+        <li class="nav-item" id="odds_matches-nav"><a class="nav-link" data-action="click->edit#track_change" href="/odds_matches">Коэффициенты на матчи</a></li>
+        <li class="nav-item" id="gt_venues-nav"><a class="nav-link" data-action="click->edit#track_change" href="/gt_venues">Места проведения</a></li>
+        <li class="nav-item" id="gt_teams_lists-nav"><a class="nav-link" data-action="click->edit#track_change" href="/gt_teams_lists">Команды</a></li>
+        <li class="nav-item" id="gt_player_lists-nav"><a class="nav-link" data-action="click->edit#track_change" href="/gt_player_lists">Игроки</a></li>
+        <li class="nav-item" id="gt_streams-nav"><a class="nav-link" data-action="click->edit#track_change" href="/gt_streams">Стримы</a></li>
+        <li class="nav-item" id="gt_video_autos-nav"><a class="nav-link" data-action="click->edit#track_change" href="/gt_video_autos">Видео</a></li>
+        <li class="nav-item" id="dmp_admins-nav"><a class="nav-link" data-action="click->edit#track_change" href="/dmp_admins">Админы</a></li>
+        <li class="nav-item" id="dmp_admin_roles-nav"><a class="nav-link" data-action="click->edit#track_change" href="/dmp_admin_roles">Роли админов</a></li>
+        <li class="nav-item" id="dmp_service_users-nav"><a class="nav-link" data-action="click->edit#track_change" href="/dmp_service_users">Внешние сервисы</a></li>
+        <li class="nav-item" id="gt_maps-nav"><a class="nav-link" data-action="click->edit#track_change" href="/gt_maps">Карты</a></li>
+        <li class="nav-item" id="gt_crons-nav"><a class="nav-link" data-action="click->edit#track_change" href="/gt_crons">Инструменты</a></li>
+        <li class="nav-item" id="gt_countries-nav"><a class="nav-link" data-action="click->edit#track_change" href="/gt_countries">Страны</a></li>
+        <li class="nav-item" id="esn_odds-nav"><a class="nav-link" data-action="click->edit#track_change" href="/esn_odds?page=1">Ставки</a></li>
+        <li class="nav-item" id="esn_banners-nav"><a class="nav-link" data-action="click->edit#track_change" href="/esn_banners">Баннеры</a></li>
+        <li class="nav-item" id="esn_banner_positions-nav"><a class="nav-link" data-action="click->edit#track_change" href="/esn_banner_positions?page=1">Баннерные места</a></li>
+        <li class="nav-item" id="esn_traffics-nav"><a class="nav-link" data-action="click->edit#track_change" href="/esn_traffics">Баннеры: Правила трафика</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"
+            ><p>Monitoring</p>
+            <i class="fas fa-angle-left right"></i
+          ></a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a class="nav-link" href="/monitoring/mockserver"><p>Mock Server</p></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" href="/sidekiq"><p>Sidekiq</p></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" href="/redis_dashboard"><p>Redis Dashboard</p></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" href="/redis_web_manager"><p>Redis Web Manager</p></a>
+            </li>
+            <sidekiq_web_path></sidekiq_web_path>
+            <li class="nav-item">
+              <a class="nav-link" href="/monitoring/cronlive/100"><p>Cronlive</p></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/monitoring/cron/100"><p>Cron</p></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/monitoring/actions/100"><p>Actions</p></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/monitoring/status/100"><p>Status</p></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/monitoring/sql/100"><p>Sql</p></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/monitoring/sqlw/100"><p>Sqlw</p></a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  
+
+</aside>
+
+        <div class="content-wrapper">
+          <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Турниры</li>
+  </ol>
+</nav>
+
+          <section class="page">
+  <div class="container">
+    <ul class="nav nav-tabs">
+      <!--<li>
+                <a href="/dota-2/adm/news" class="tname">Новости</a>
+            </li>-->
+      <li class="active">
+        <a href="/dota-2/adm" class="tname">Турниры</a>
+      </li>
+      <li>
+        <a href="/dota-2/adm/stages" class="tname">Стадии</a>
+      </li>
+      <li>
+        <a href="/dota-2/adm/rounds" class="tname">Раунды</a>
+      </li>
+      <li>
+        <a href="/dota-2/adm/matches" class="tname">Матчи</a>
+      </li>
+      <li><a href="/dota-2/adm/teams" class="tname">Команды</a></li>
+      <li><a href="/dota-2/adm/players" class="tname">Игроки</a></li>
+      <li><a href="/dota-2/adm/transfers" class="tname">Трансферы</a></li>
+      <li><a href="/dota-2/adm/streams" class="tname">Стримы</a></li>
+      <li><a href="/dota-2/adm/video" class="tname">Видео</a></li>
+      <li><a href="/dota-2/adm/api" class="tname">API</a></li>
+    </ul>
+    <div class="pagebg">
+      <form method="GET" action="/dota-2/adm" id="filter" style="padding: 10px">
+        <div class="row">
+          <div class="col-xs-9">
+            <input type="text" class="form-control input-sm" name="f" value="" />
+          </div>
+          <div class="col-xs-3">
+            <button type="submit" class="btn btn-default btn-block btn-sm">Найти</button>
+          </div>
+        </div>
+      </form>
+      <div class="">
+        <table class="matches table table-striped table-hover">
+          <tbody>
+            <tr>
+              <th class="text-center" width="50px">ID</th>
+              <th class="text-center" width="100px">Series</th>
+              <th width="80px"></th>
+              <th>Название турнира</th>
+              <th>Описание</th>
+              <th></th>
+            </tr>
+            <tr>
+              <td class="text-center">8502</td>
+              <td class="text-center">–</td>
+              <td style="vertical-align: middle">
+                <img src="https://game-tournaments.com/adm/media/tournament/_60/e8502.png" />
+              </td>
+              <td><a target="_blank" href="/dota-2/pan-american-esports-championships-2023" style="white-space: nowrap">PEC 2023</a><br /><span class="text-muted">pan-american-esports-championships-2023</span></td>
+              <td>Pan American Esports Championships 2023&nbsp;— Панамериканский турнир от организаторов...</td>
+              <td>
+                <a class="btn btn-default btn-xs" href="/dota-2/adm?id=8502">Edit</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-center">8497</td>
+              <td class="text-center">–</td>
+              <td style="vertical-align: middle">
+                <img src="https://game-tournaments.com/adm/media/tournament/_60/e8497.png" />
+              </td>
+              <td><a target="_blank" href="/dota-2/american-league-season-1" style="white-space: nowrap">AL S1</a><br /><span class="text-muted">american-league-season-1</span></td>
+              <td>American League Season 1 — турнир для команд из Южной Америки. В мероприятии...</td>
+              <td>
+                <a class="btn btn-default btn-xs" href="/dota-2/adm?id=8497">Edit</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-center">8492</td>
+              <td class="text-center">EPL World America</td>
+              <td style="vertical-align: middle">
+                <img src="https://game-tournaments.com/adm/media/tournament/_60/e8492.png" />
+              </td>
+              <td><a target="_blank" href="/dota-2/european-pro-league-world-series-america-season-8" style="white-space: nowrap">EPL World AM S8</a><br /><span class="text-muted">european-pro-league-world-series-america-season-8</span></td>
+              <td>European Pro League World Series America Season 8&nbsp;— серия регулярных турниров...</td>
+              <td>
+                <a class="btn btn-default btn-xs" href="/dota-2/adm?id=8492">Edit</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-center">8473</td>
+              <td class="text-center">EPL</td>
+              <td style="vertical-align: middle">
+                <img src="https://game-tournaments.com/adm/media/tournament/_60/e8473.png" />
+              </td>
+              <td><a target="_blank" href="/dota-2/european-pro-league-season-13" style="white-space: nowrap">EPL S13</a><br /><span class="text-muted">european-pro-league-season-13</span></td>
+              <td>European Pro League Season 13&nbsp;— серия турниров для команд из Европы...</td>
+              <td>
+                <a class="btn btn-default btn-xs" href="/dota-2/adm?id=8473">Edit</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-center">8472</td>
+              <td class="text-center">–</td>
+              <td style="vertical-align: middle">
+                <img src="https://game-tournaments.com/adm/media/tournament/_60/e8472.png" />
+              </td>
+              <td><a target="_blank" href="/dota-2/b5vip-championship" style="white-space: nowrap">B5vip</a><br /><span class="text-muted">b5vip-championship</span></td>
+              <td>B5vip Championship&nbsp;—&nbsp;турнир для команд из Китая и Юго-Восточной...</td>
+              <td>
+                <a class="btn btn-default btn-xs" href="/dota-2/adm?id=8472">Edit</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-center">8464</td>
+              <td class="text-center">APPL</td>
+              <td style="vertical-align: middle">
+                <img src="https://game-tournaments.com/adm/media/tournament/_60/e8464.png" />
+              </td>
+              <td><a target="_blank" href="/dota-2/apac-predator-league-2024" style="white-space: nowrap">APPL 2024</a><br /><span class="text-muted">apac-predator-league-2024</span></td>
+              <td>Asia Pacific Predator League 2024&nbsp;— турнир от организаторов Predator Gaming.&nbsp;</td>
+              <td>
+                <a class="btn btn-default btn-xs" href="/dota-2/adm?id=8464">Edit</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-center">8461</td>
+              <td class="text-center">–</td>
+              <td style="vertical-align: middle">
+                <img src="https://game-tournaments.com/adm/media/tournament/_60/e8461.png" />
+              </td>
+              <td><a target="_blank" href="/dota-2/betsure-cup" style="white-space: nowrap">BC</a><br /><span class="text-muted">betsure-cup</span></td>
+              <td>Betsure Cup — онлайн-турнир, организованный для команд из Китая...</td>
+              <td>
+                <a class="btn btn-default btn-xs" href="/dota-2/adm?id=8461">Edit</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-center">8426</td>
+              <td class="text-center">BB SB</td>
+              <td style="vertical-align: middle">
+                <img src="https://game-tournaments.com/adm/media/tournament/_60/e8426.png" />
+              </td>
+              <td><a target="_blank" href="/dota-2/betboom-streamers-battle-season-4" style="white-space: nowrap">BB SB S4</a><br /><span class="text-muted">betboom-streamers-battle-season-4</span></td>
+              <td>BetBoom Streamers Battle Season 4&nbsp;—&nbsp;киберспортивная лига для известных...</td>
+              <td>
+                <a class="btn btn-default btn-xs" href="/dota-2/adm?id=8426">Edit</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-center">8419</td>
+              <td class="text-center">ESL One</td>
+              <td style="vertical-align: middle">
+                <img src="https://game-tournaments.com/adm/media/tournament/_60/e8419.png" />
+              </td>
+              <td><a target="_blank" href="/dota-2/esl-one-kuala-lumpur-2023" style="white-space: nowrap">ESL One Kuala Lumpur 2023</a><br /><span class="text-muted">esl-one-kuala-lumpur-2023</span></td>
+              <td>Турнирный оператор ESL&nbsp;представил&nbsp;новый чемпионат...</td>
+              <td>
+                <a class="btn btn-default btn-xs" href="/dota-2/adm?id=8419">Edit</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-center">8406</td>
+              <td class="text-center">–</td>
+              <td style="vertical-align: middle">
+                <img src="https://game-tournaments.com/adm/media/tournament/_60/e8406.png" />
+              </td>
+              <td><a target="_blank" href="/dota-2/global-esports-games-2023" style="white-space: nowrap">GEG 2023</a><br /><span class="text-muted">global-esports-games-2023</span></td>
+              <td>Global Esports Games 2023&nbsp;— турнир от организатора&nbsp;Global Esports Federation,...</td>
+              <td>
+                <a class="btn btn-default btn-xs" href="/dota-2/adm?id=8406">Edit</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <nav class="pull-right">
+        <ul class="pagination">
+          <li class="active"><a href="/dota-2/adm?s=1">1</a></li>
+          <li><a href="/dota-2/adm?s=2">2</a></li>
+          <li><a href="/dota-2/adm?s=3">3</a></li>
+          <li><a href="/dota-2/adm?s=4">4</a></li>
+        </ul>
+      </nav>
+      <br /><br /><br />
+      <form action="adm" method="POST" name="tournament" class="form-horizontal">
+        <input type="hidden" class="input" rel="1" name="game_id" value="582" />
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Название турнира</label>
+              <div class="col-sm-10" rel="title">
+                <input type="text" rel="1" name="title" value="" class="form-control input" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Транслит</label>
+              <div class="col-sm-10" rel="eng">
+                <input type="text" rel="1" name="eng" value="" class="form-control input" />
+              </div>
+            </div>
+            <div class="text-center">
+              <button class="btn btn-primary btn-sm" onclick="sform('tournament')" type="button">Добавить</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+        </div>
+    </div>
+    
+<!-- Site Sripts -->
+<script src="./inc/main.js"></script>
+
+<!--PAGES select only dev-->
+<style>
+  .project-menu {
+    position: fixed;
+    z-index: 1000;
+    bottom: 5px;
+    left: 5px;
+  }
+</style>
+<div class="project-menu">
+  <div class="btn-group" role="group" id="hpages">
+    <div class="dropup">
+      <button class="btn btn-default btn-sm dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Страницы
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./external.html">external</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!--.STYLE CHANGE dev-->
+<!--.PAGES navi dev-->
+
+  </body>
+</html>
