@@ -1,11 +1,7 @@
-<aside
-  class="main-sidebar sidebar-dark-primary elevation-4 os-host os-theme-dark os-host-resize-disabled os-host-scrollbar-horizontal-hidden os-host-scrollbar-vertical-hidden os-host-transition">
-
+<aside class="main-sidebar sidebar-dark-primary elevation-4 os-host os-theme-dark os-host-resize-disabled os-host-scrollbar-horizontal-hidden os-host-scrollbar-vertical-hidden os-host-transition">
   <div class="brand-link">
-    <a href="/"><img src="https://game-tournaments.com/assets/img/logo_gt_footer.png" alt="game tournaments"
-        class="png"></a>
-    <a href="javascript:;" class="gttime" onclick="get_time()"><i class="fa fa-fw fa-clock-o"></i><span
-        class="utime">08:09 CET</span> <span class="caret"></span></a>
+    <a href="/"><img src="https://game-tournaments.com/assets/img/logo_gt_footer.png" alt="game tournaments" class="png" /></a>
+    <a href="javascript:;" class="gttime" onclick="get_time()"><i class="fa fa-fw fa-clock-o"></i><span class="utime">08:09 CET</span> <span class="caret"></span></a>
   </div>
   <div class="sidebar">
     <div class="user-panel">
@@ -13,8 +9,7 @@
         <span><a class="d-block" href="/dmp_admins/32/edit">adm@esnadm.com</a></span>
         <span>
           <a class="btn btn-primary btn-xs" href="/dmp_admins/32/edit"><i class="fa fa-pencil"></i></a>
-          <a class="btn btn-primary btn-xs" rel="nofollow" data-method="delete" href="/logout"><i
-              class="fa fa-sign-out"></i></a>
+          <a class="btn btn-primary btn-xs" rel="nofollow" data-method="delete" href="/logout"><i class="fa fa-sign-out"></i></a>
         </span>
       </div>
     </div>
@@ -26,19 +21,16 @@
         <li class="nav-item" id="gt_tournaments_rounds-nav"><a class="nav-link" href="/gt_tournaments_rounds">Раунды</a></li>
         <li class="nav-item" id="gt_tournaments_round_tabs-nav"><a class="nav-link" href="/gt_tournaments_round_tabs">Cубраунды</a></li>
         <li class="nav-item" id="gt_match_lists-nav"><a class="nav-link" href="/gt_match_lists">Матчи</a></li>
-        <li class="nav-item withLine " id="esn_news_articles-nav">
-          <a class="nav-link" href="/esn_news_articles">
-            <span>Новости</span></a>
+        <li class="nav-item withLine" id="esn_news_articles-nav">
+          <a class="nav-link" href="/esn_news_articles"> <span>Новости</span></a>
           <ul class="nav nav-pills flex-column">
             <li class="nav-item" id="esn_top_news_articles-nav">
-              <a class="nav-link" href="/esn_top_news_articles?page=1">Новости:
-                Топ</a>
+              <a class="nav-link" href="/esn_top_news_articles?page=1">Новости: Топ</a>
             </li>
             <li class="nav-item" id="esn_news_authors_lists-nav">
-              <a class="nav-link" href="/esn_news_authors_lists?page=1">Новости:
-                Авторы</a>
+              <a class="nav-link" href="/esn_news_authors_lists?page=1">Новости: Авторы</a>
             </li>
-            <li class="nav-item" id="api_lol_matches-nav">
+            <li class="nav-item" id="api_lol_matches-nav"></li>
           </ul>
         </li>
         <li class="nav-item withLine" id="esn_news_articles-nav">
@@ -47,19 +39,15 @@
           </div>
           <ul class="nav nav-pills flex-column">
             <li class="nav-item" id="gt_match_lists-nav">
-              <a class="nav-link" href="/api_lol_matches">API: LoL Матчи<span class="right badge badge-danger"
-                  data-controller="realtime-partial"
-                  data-realtime-partial-key="dmp/api/lol/unbinded_games">110</span></a>
+              <a class="nav-link" href="/api_lol_matches">API: LoL Матчи<span class="right badge badge-danger" data-controller="realtime-partial" data-realtime-partial-key="dmp/api/lol/unbinded_games">110</span></a>
             </li>
             <li class="nav-item" id="api_valorant_matches-nav">
-              <a class="nav-link" href="/api_valorant_matches">API: Valorant
-                Матчи<span class="right badge badge-danger"></span></a>
+              <a class="nav-link" href="/api_valorant_matches">API: Valorant Матчи<span class="right badge badge-danger"></span></a>
             </li>
           </ul>
         </li>
-        <hr>
-        <li class="nav-item" id="odds_matches-nav"><a class="nav-link" href="/odds_matches">Коэффициенты на матчи</a>
-        </li>
+        <hr />
+        <li class="nav-item" id="odds_matches-nav"><a class="nav-link" href="/odds_matches">Коэффициенты на матчи</a></li>
         <li class="nav-item" id="gt_venues-nav"><a class="nav-link" href="/gt_venues">Места проведения</a></li>
         <li class="nav-item" id="gt_teams_lists-nav"><a class="nav-link" href="/gt_teams_lists">Команды</a></li>
         <li class="nav-item" id="gt_player_lists-nav"><a class="nav-link" href="/gt_player_lists">Игроки</a></li>
@@ -74,8 +62,7 @@
         <li class="nav-item" id="esn_odds-nav"><a class="nav-link" href="/esn_odds?page=1">Ставки</a></li>
         <li class="nav-item" id="esn_banners-nav"><a class="nav-link" href="/esn_banners">Баннеры</a></li>
         <li class="nav-item" id="esn_banner_positions-nav"><a class="nav-link" href="/esn_banner_positions?page=1">Баннерные места</a></li>
-        <li class="nav-item" id="esn_traffics-nav"><a class="nav-link" href="/esn_traffics">Баннеры: Правила трафика</a>
-        </li>
+        <li class="nav-item" id="esn_traffics-nav"><a class="nav-link" href="/esn_traffics">Баннеры: Правила трафика</a></li>
         <li class="nav-item">
           <a class="nav-link" href="#">
             <p>Monitoring</p>
@@ -137,6 +124,5 @@
         </li>
       </ul>
     </nav>
-
-
+  </div>
 </aside>
