@@ -52,9 +52,11 @@
 }
 .main-sidebar .brand-link {
     border-bottom: 1px solid #4b545c;
-    display: block;
     text-align: center;
-    padding: 10px;
+    padding: 10px 10px 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 [class*=sidebar-dark] .brand-link {
     border-bottom: 1px solid #4b545c;
@@ -62,7 +64,7 @@
 .main-sidebar .brand-link img{
     width: 60px;
 }
-.sidebar ul{
+.sidebar > .nav{
   height: calc(100vh - 3.5rem - 1px);
   overflow: auto!important;
 }
@@ -91,7 +93,15 @@
 .sidebar .user-panel .info{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .mt-2{
   margin-top: 0.5rem!important;
+}
+.sidebar hr{
+  border-top: 1px solid #4b545c;
+  margin: 5px 0;
+}
+.withLine{
+  background: #ccc;
 }
