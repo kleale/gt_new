@@ -15,7 +15,8 @@ var gulp = require('gulp'),
   postcss = require('gulp-postcss'),
   atImport = require('postcss-import'),        // import in css
   //postcssMixins = require('postcss-mixins')({ mixins: cssMixins }),
-  postcssNested = require('postcss-nested'),       // sass in postcss
+  //postcssNested = require('postcss-nested'),       // sass in postcss
+  sass = require('gulp-sass')(require('sass')),
   postcssShort = require('postcss-short'),         // сокращенная запись в css
   //postcssVars = require('postcss-simple-vars')({ variables: cssVariables }),
   postcssColor = require('postcss-color-function'),
@@ -43,14 +44,14 @@ var path = {
     html: 'src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
     tpl: 'src/*.tpl',
     js: 'src/inc/main.js',//В стилях и скриптах нам понадобятся только main файлы
-    style: 'src/css/main.css',
+    style: 'src/css/main.scss',
     img: 'src/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
     fonts: 'src/fonts/**/*.*'
   },
   watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
     html: 'src/**/*.tpl',
     js: 'src/inc/**/*.js',
-    style: 'src/**/*.css',
+    style: 'src/**/*.scss',
     img: 'src/img/**/*.*',
     fonts: 'src/fonts/**/*.*'
   },
@@ -89,36 +90,35 @@ gulp.task('html:build', function (done) {
 });
 
 //  Сборка JS
-
 gulp.task('js:build', function (done) {
-  gulp.src(path.src.js) //Найдем наш main файл
-    .pipe(include()) //Прогоним через include
-    //.pipe(sourcemaps.init()) //Инициализируем sourcemap
-    .pipe(uglify()) //Сожмем наш js
-    //.pipe(sourcemaps.write()) //Пропишем карты
-    .pipe(gulp.dest(path.build.js)) //Выплюнем готовый файл в build
-    .pipe(reload({ stream: true })); //И перезагрузим сервер
+  gulp.src(path.src.js)
+    .pipe(include()) 
+    //.pipe(sourcemaps.init())
+    .pipe(uglify()) 
+    //.pipe(sourcemaps.write()) 
+    .pipe(gulp.dest(path.build.js))
+    .pipe(reload({ stream: true })); 
   done();
 });
 
 // Сборка стилей
-
 gulp.task('style:build', function () {
   var processors = [
     atImport,
     postcssShort,
     //postcssMixins,
-    postcssNested,
+    //postcssNested,
     //postcssVars,
     postcssColor,
     postcssAssets,
     //autoprefixer(),
-    //cssnano(),  // разкомментить для минимайза
+    //cssnano(),
   ];
-  return gulp.src(path.src.style) //Выберем наш main.scss
+  return gulp.src(path.src.style)
+    .pipe(sass().on('error', sass.logError))
     .pipe(postcss(processors))
-    .pipe(gulp.dest(path.build.css)) //И в build
-    .pipe(reload({ stream: true })); //И перезагрузим сервер
+    .pipe(gulp.dest(path.build.css))
+    .pipe(reload({ stream: true }));
 });
 
 // Удалить ненужные стили
@@ -154,7 +154,6 @@ gulp.task('fonts:build', function (done) {
 });
 
 // Полная сборка проекта
-
 gulp.task('build',
   gulp.parallel([
     'html:build',
@@ -166,7 +165,6 @@ gulp.task('build',
 
 
 // Изменения
-
 gulp.task('watch', function (done) {
     gulp.watch(path.watch.style, gulp.series('style:build')),
     gulp.watch(path.watch.html, gulp.series('html:build')),
@@ -193,4 +191,3 @@ gulp.task('clean', function (done) {
 
 // Per default, start scripts and styles - in console "gulp default"
 gulp.task('default', gulp.series('watch', 'build', 'webserver', 'watch'));
-
