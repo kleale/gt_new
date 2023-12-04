@@ -1,0 +1,118 @@
+#wrapper {
+    padding-left: 0px;
+}
+.content-wrapper {
+    height: 100%;
+    margin-left: 250px;
+    transition: margin;
+    padding: 20px;
+}
+.admin {
+    background-color: #1d2022;
+    background-image: none;
+}
+.admin .container{
+    width: auto;
+    max-width: inherit;
+}
+.pagebg{
+    border: 0 0 5px 5px;
+}
+.pagebg .table {
+    margin: 0 10px;
+}
+.pagebg  .panel{
+    margin: 0 10px 10px;
+}
+.layout-fixed .control-sidebar,
+.layout-fixed .main-sidebar {
+  bottom: 0;
+  float: none;
+  position: fixed;
+  top: 0;
+}
+.layout-fixed .main-sidebar {
+  left: 0;
+}
+.elevation-4 {
+  box-shadow: 0 14px 28px #00000040, 0 10px 10px #00000038 !important;
+}
+[class*="sidebar-dark-"] {
+  background-color: #343a40;
+}
+.main-sidebar {
+  height: 100vh;
+  overflow-y: hidden;
+  z-index: 1038;
+}
+.main-sidebar,
+.main-sidebar:before {
+  transition: margin-left 0.3s ease-in-out, width 0.3s ease-in-out;
+  width: 250px;
+}
+.main-sidebar .brand-link {
+    border-bottom: 1px solid #4b545c;
+    text-align: center;
+    padding: 10px 10px 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+[class*=sidebar-dark] .brand-link {
+    border-bottom: 1px solid #4b545c;
+}
+.main-sidebar .brand-link img{
+    width: 60px;
+}
+.sidebar > .nav{
+  height: calc(100vh - 3.5rem - 1px);
+  overflow: auto!important;
+}
+.sidebar .nav-pills {
+    padding: 0 10px;
+  }
+.sidebar .nav-pills > li {
+  float: none;
+}
+.sidebar .nav-pills > li > a {
+  border-color: transparent;
+  text-shadow: none;
+  background: transparent;
+  padding: 7px;
+}
+.sidebar .nav-pills > li > a:hover {
+  background: #4d545a;
+  border-color: transparent;
+}
+.sidebar .user-panel {
+    padding: 10px 20px;
+}
+[class*=sidebar-dark] .user-panel {
+    border-bottom: 1px solid #4f5962;
+}
+.sidebar .user-panel .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.mt-2{
+  margin-top: 0.5rem!important;
+}
+.sidebar hr{
+  border-top: 1px solid #4b545c;
+  margin: 5px 0;
+}
+.withLine{
+  background-color: #ccc;
+}
+.withLine .nav-link{
+    display: block;
+  }
+.withLine .nav-link::after{
+      display: block;
+      border: none;
+      height: 1px;
+      width: 100%;
+      margin: 0;
+      background-color: var(#ccc);
+    }
