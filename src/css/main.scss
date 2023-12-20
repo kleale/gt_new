@@ -1,2 +1,63 @@
-@import '../template/adm/base.css';
 @import '../template/adm/aside/aside.scss';
+
+
+#wrapper {
+    padding-left: 0px;
+}
+
+.content-wrapper {
+    height: 100%;
+    margin-left: 250px;
+    transition: margin;
+    padding: 20px;
+}
+
+.admin {
+    background-color: #1d2022;
+    background-image: none;
+}
+
+.admin .container {
+    width: auto;
+    max-width: inherit;
+}
+
+.pagebg {
+    border-radius: 0 0 5px 5px;
+    padding: 0;
+    background: transparent !important;
+}
+
+.pagebg .table {
+    margin: 0 10px;
+}
+
+.pagebg .panel {
+    margin: 0 10px 10px;
+}
+
+.pagebg .items-list {
+    margin-left: 0;
+    padding: 10px 25px;
+}
+
+.pagebg .box {
+    border-radius: 3px;
+}
+
+.admin .pagebg a {
+    color: #91cdd7;
+}
+
+.pagebg .panel {
+    margin: 0;
+}
+
+.flex{
+    display: flex;
+    gap: 15px
+}
+
+.grow{
+    flex-grow: 1;
+}

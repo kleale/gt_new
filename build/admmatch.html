@@ -1,0 +1,262 @@
+
+
+<!DOCTYPE html>
+<html>
+  
+<head lang="en">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Доступ с вашего IP-адреса временно ограничен</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,cyrillic" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/png" href="/favicon32.png" />
+  <!-- <link rel="stylesheet" href="/assets/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://game-tournaments.com/assets/css/bootstrap.min.css" />
+
+  <!-- Import main styles -->
+  <link rel="stylesheet" href="https://game-tournaments.com/assets/css/style.min.css?v=v3.7.7" />
+  <link rel="stylesheet" href="https://game-tournaments.com/assets/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/main.css?13" />
+
+  <!--Import jQuery-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <!--<script src="../inc/assets/js/jquery-2.1.1.min.js"></script> -->
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <!-- <script src="../inc/assets/js/bootstrap.min.js"></script>  -->
+</head>
+
+  <body class="admin sidebar-mini layout-fixed layout-navbar-fixed">
+    <div id="wrapper">
+        <aside class="main-sidebar sidebar-dark-primary elevation-4 os-host os-theme-dark os-host-resize-disabled os-host-scrollbar-horizontal-hidden os-host-scrollbar-vertical-hidden os-host-transition">
+  <div class="brand-link">
+    <a href="/"><img src="https://game-tournaments.com/assets/img/logo_gt_footer.png" alt="game tournaments" class="png" /></a>
+    <a href="javascript:;" class="gttime" onclick="get_time()"><i class="fa fa-fw fa-clock-o"></i><span class="utime">08:09 CET</span> <span class="caret"></span></a>
+  </div>
+  <div class="sidebar">
+    <div class="user-panel">
+      <div class="info">
+        <span><a class="d-block" href="/dmp_admins/32/edit">adm@esnadm.com</a></span>
+        <span>
+          <a class="btn btn-primary btn-xs" href="/dmp_admins/32/edit"><i class="fa fa-pencil"></i></a>
+          <a class="btn btn-primary btn-xs" rel="nofollow" data-method="delete" href="/logout"><i class="fa fa-sign-out"></i></a>
+        </span>
+      </div>
+    </div>
+
+    <nav class="mt-2">
+      <ul class="nav nav-pills flex-column" id="main-nav">
+        <li class="nav-item" id="gt_tournaments-nav"><a class="nav-link active" href="/gt_tournaments">Турниры</a></li>
+        <li class="nav-item" id="gt_tournaments_stages-nav"><a class="nav-link" href="/gt_tournaments_stages">Стадии</a></li>
+        <li class="nav-item" id="gt_tournaments_rounds-nav"><a class="nav-link" href="/gt_tournaments_rounds">Раунды</a></li>
+        <li class="nav-item" id="gt_tournaments_round_tabs-nav"><a class="nav-link" href="/gt_tournaments_round_tabs">Cубраунды</a></li>
+        <li class="nav-item" id="gt_match_lists-nav"><a class="nav-link" href="/gt_match_lists">Матчи</a></li>
+        <li class="nav-item withLine" id="esn_news_articles-nav">
+          <a class="nav-link" href="/esn_news_articles"> <span>Новости</span></a>
+          <ul class="nav nav-pills flex-column">
+            <li class="nav-item" id="esn_top_news_articles-nav">
+              <a class="nav-link" href="/esn_top_news_articles?page=1">Новости: Топ</a>
+            </li>
+            <li class="nav-item" id="esn_news_authors_lists-nav">
+              <a class="nav-link" href="/esn_news_authors_lists?page=1">Новости: Авторы</a>
+            </li>
+            <li class="nav-item" id="api_lol_matches-nav"></li>
+          </ul>
+        </li>
+        <li class="nav-item withLine" id="esn_news_articles-nav">
+          <div class="nav-link">
+            <span>API</span>
+          </div>
+          <ul class="nav nav-pills flex-column">
+            <li class="nav-item" id="gt_match_lists-nav">
+              <a class="nav-link" href="/api_lol_matches">API: LoL Матчи<span class="right badge badge-danger" data-controller="realtime-partial" data-realtime-partial-key="dmp/api/lol/unbinded_games">110</span></a>
+            </li>
+            <li class="nav-item" id="api_valorant_matches-nav">
+              <a class="nav-link" href="/api_valorant_matches">API: Valorant Матчи<span class="right badge badge-danger"></span></a>
+            </li>
+          </ul>
+        </li>
+        <hr />
+        <li class="nav-item" id="odds_matches-nav"><a class="nav-link" href="/odds_matches">Коэффициенты на матчи</a></li>
+        <li class="nav-item" id="gt_venues-nav"><a class="nav-link" href="/gt_venues">Места проведения</a></li>
+        <li class="nav-item" id="gt_teams_lists-nav"><a class="nav-link" href="/gt_teams_lists">Команды</a></li>
+        <li class="nav-item" id="gt_player_lists-nav"><a class="nav-link" href="/gt_player_lists">Игроки</a></li>
+        <li class="nav-item" id="gt_streams-nav"><a class="nav-link" href="/gt_streams">Стримы</a></li>
+        <li class="nav-item" id="gt_video_autos-nav"><a class="nav-link" href="/gt_video_autos">Видео</a></li>
+        <li class="nav-item" id="dmp_admins-nav"><a class="nav-link" href="/dmp_admins">Админы</a></li>
+        <li class="nav-item" id="dmp_admin_roles-nav"><a class="nav-link" href="/dmp_admin_roles">Роли админов</a></li>
+        <li class="nav-item" id="dmp_service_users-nav"><a class="nav-link" href="/dmp_service_users">Внешние сервисы</a></li>
+        <li class="nav-item" id="gt_maps-nav"><a class="nav-link" href="/gt_maps">Карты</a></li>
+        <li class="nav-item" id="gt_crons-nav"><a class="nav-link" href="/gt_crons">Инструменты</a></li>
+        <li class="nav-item" id="gt_countries-nav"><a class="nav-link" href="/gt_countries">Страны</a></li>
+        <li class="nav-item" id="esn_odds-nav"><a class="nav-link" href="/esn_odds?page=1">Ставки</a></li>
+        <li class="nav-item" id="esn_banners-nav"><a class="nav-link" href="/esn_banners">Баннеры</a></li>
+        <li class="nav-item" id="esn_banner_positions-nav"><a class="nav-link" href="/esn_banner_positions?page=1">Баннерные места</a></li>
+        <li class="nav-item" id="esn_traffics-nav"><a class="nav-link" href="/esn_traffics">Баннеры: Правила трафика</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <p>Monitoring</p>
+            <i class="fas fa-angle-left right"></i>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a class="nav-link" href="/monitoring/mockserver">
+                <p>Mock Server</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" href="/sidekiq">
+                <p>Sidekiq</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" href="/redis_dashboard">
+                <p>Redis Dashboard</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" href="/redis_web_manager">
+                <p>Redis Web Manager</p>
+              </a>
+            </li>
+            <sidekiq_web_path></sidekiq_web_path>
+            <li class="nav-item">
+              <a class="nav-link" href="/monitoring/cronlive/100">
+                <p>Cronlive</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/monitoring/cron/100">
+                <p>Cron</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/monitoring/actions/100">
+                <p>Actions</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/monitoring/status/100">
+                <p>Status</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/monitoring/sql/100">
+                <p>Sql</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/monitoring/sqlw/100">
+                <p>Sqlw</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</aside>
+
+        <div class="content-wrapper">
+          <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Турниры</li>
+  </ol>
+</nav>
+
+          <section class="page">
+  <div class="container">
+    <div class="pagebg">
+
+        <div class="flex">
+          <div class="col grow">
+            <div class="panel panel-default panel-login">
+              <div class="panel-heading">
+                <h3 class="panel-title">Заголовок блока</h3>
+              </div>
+              <div class="panel-body">
+                <div class="list-group">
+                  <a href="#" class="list-group-item active"> Cras justo odio </a>
+                  <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+                  <a href="#" class="list-group-item">Morbi leo risus</a>
+                  <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+                  <a href="#" class="list-group-item">Vestibulum at eros</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" style="width: 400px;">
+            <div class="panel panel-default panel-login">
+              <div class="panel-heading">
+                <h3 class="panel-title">Заголовок блока</h3>
+              </div>
+              <div class="panel-body">
+                <div class="list-group">
+                  <a href="#" class="list-group-item active"> Cras justo odio </a>
+                  <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+                  <a href="#" class="list-group-item">Morbi leo risus</a>
+                  <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+                  <a href="#" class="list-group-item">Vestibulum at eros</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+
+      <!-- <br />
+      <div class="box clearfix">
+        <h2 class="clearfix">
+          Логи
+          <figure class="odtip scorecheck" title="" data-original-title="Show results"><input type="checkbox" id="scrorecur" onclick="show_scores('current',this.checked);" /><label for="scrorecur"></label></figure>
+          <a class="pull-right mrefresh" onclick="match_upd()" href="javascript:;"><i class="fa fa-history"></i></a>
+        </h2>
+        <div id="block_matches_current">
+          <ul class="items-list">
+            <li><a href="/adm/news/ru">[RU] Новости</a></li>
+            <li><a href="/adm/news/en">[EN] News</a></li>
+            <li><a href="/adm/news/pt">[PT] Notícias</a></li>
+          </ul>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</section>
+
+        </div>
+    </div>
+    
+<!-- Site Sripts -->
+<script src="./inc/main.js"></script>
+
+<!--PAGES select only dev-->
+<style>
+  .project-menu {
+    position: fixed;
+    z-index: 1000;
+    bottom: 5px;
+    left: 5px;
+  }
+</style>
+<div class="project-menu">
+  <div class="btn-group" role="group" id="hpages">
+    <div class="dropup">
+      <button class="btn btn-default btn-sm dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Страницы
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./external.html">external</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!--.STYLE CHANGE dev-->
+<!--.PAGES navi dev-->
+
+  </body>
+</html>
