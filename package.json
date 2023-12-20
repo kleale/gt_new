@@ -1,6 +1,6 @@
 {
   "name": "gt2.0",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "game-tournaments redesign",
   "homepage": "https://kleale.github.io/gt_new/",
   "main": "gulpfile.js",
