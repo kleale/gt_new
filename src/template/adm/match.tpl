@@ -1,42 +1,124 @@
+{% set jobs = [ "achievements", "money", 'players', 'prize', 'achievements'] %}
+
 <section class="page">
   <div class="container">
     <div class="pagebg">
+      <div class="flex">
+        <div class="col grow">
+          <div class="panel panel-default panel-login">
+            <div class="panel-heading">
+              <h3 class="panel-title">Матчи</h3>
+            </div>
+            <div class="panel-body"></div>
+          </div>
+        </div>
+        <div class="col" style="width: 400px">
+          <div class="panel panel-default panel-login">
+            <div class="panel-heading">
+              <h3 class="panel-title">Логи</h3>
+            </div>
+            <div class="panel-body">
+              <table class="table table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>User</th>
+                    <th>Event</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for i in 0..10 %}
+                  <tr>
+                    <td><span class="sct" data-opt="ynt" data-format="%j% %ms% %y%, %h%:%i%" datetime="1702875883">18 дек, 08:04</span></td>
+                    <td>
+                      {% if i == 1 %}
+                      <a href="javascript:;" onclick="log_action(672)">notdrax#67{{ i }}</a>
+                      {% else %}
+                      <a href="javascript:;" onclick="log_action(672)">drax#67{{ i }}</a>
+                      {% endif %}
+                    </td>
+                    <td>
+                      <a>*[tournament#15{{ i }}]</a>
+                    </td>
+                    <td>
+                      {% if i == 1 %}
+                      <span class="label label-success">NEW</span>
+                      {% endif %}
+                    </td>
+                  </tr>
 
-        <div class="flex">
-          <div class="col grow">
-            <div class="panel panel-default panel-login">
-              <div class="panel-heading">
-                <h3 class="panel-title">Заголовок блока</h3>
-              </div>
-              <div class="panel-body">
-                <div class="list-group">
-                  <a href="#" class="list-group-item active"> Cras justo odio </a>
-                  <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-                  <a href="#" class="list-group-item">Morbi leo risus</a>
-                  <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-                  <a href="#" class="list-group-item">Vestibulum at eros</a>
-                </div>
-              </div>
+                  {% endfor %}
+                </tbody>
+              </table>
+              <nav>
+                <ul class="pagination">
+                  <li class="active"><a href="javascript:;" onclick="pages('actions', 1)">1</a></li>
+                  <li><a href="javascript:;" onclick="pages('actions', 2)">2</a></li>
+                  <li><a href="javascript:;" onclick="pages('actions', 3)">3</a></li>
+                  <li><a href="javascript:;" onclick="pages('actions', 4)">4</a></li>
+                  <li><a href="javascript:;" onclick="pages('actions', 5)">5</a></li>
+                  <li><a href="javascript:;" onclick="pages('actions', 6)">6</a></li>
+                  <li><a href="javascript:;" onclick="pages('actions', 7)">7</a></li>
+                  <li>
+                    <a href="javascript:;" onclick="pages('actions', 7);"><span aria-hidden="true">»</span></a>
+                  </li>
+                </ul>
+              </nav>
+              <hr />
+              <h5>Джобы</h5>
+              <table class="table table-striped table-condensed">
+                <tbody>
+                  {% for job in jobs %}
+                  <tr>
+                    <td width="10">
+                        [2]
+                    </td>
+                    <td>
+                      <a>{{ job }}</a>
+                    </td>
+                    <td>
+                      0.02s
+                    </td>
+                    <td>
+                      {% if job == 'players' %}
+                      <span class="label label-warning">Error</span>
+                      {% endif %}
+                    </td>
+                  </tr>
+
+                  {% endfor %}
+                </tbody>
+              </table>
             </div>
           </div>
-          <div class="col" style="width: 400px;">
-            <div class="panel panel-default panel-login">
-              <div class="panel-heading">
-                <h3 class="panel-title">Заголовок блока</h3>
-              </div>
-              <div class="panel-body">
-                <div class="list-group">
-                  <a href="#" class="list-group-item active"> Cras justo odio </a>
-                  <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-                  <a href="#" class="list-group-item">Morbi leo risus</a>
-                  <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-                  <a href="#" class="list-group-item">Vestibulum at eros</a>
-                </div>
+          <br />
+          <div class="list-group">
+            <div class="list-group-item">Какое-то меню со ссылками</div>
+            <a href="#" class="list-group-item active"> Cras justo odio </a>
+            <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+            <a href="#" class="list-group-item">Morbi leo risus</a>
+            <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+            <a href="#" class="list-group-item">Vestibulum at eros</a>
+          </div>
+          <br />
+
+          <div class="panel panel-default panel-login">
+            <div class="panel-heading">
+              <h3 class="panel-title">Блок</h3>
+            </div>
+            <div class="panel-body">
+              <div class="list-group">
+                <a href="#" class="list-group-item active"> Cras justo odio </a>
+                <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+                <a href="#" class="list-group-item">Morbi leo risus</a>
+                <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+                <a href="#" class="list-group-item">Vestibulum at eros</a>
               </div>
             </div>
           </div>
         </div>
-      
+      </div>
 
       <!-- <br />
       <div class="box clearfix">

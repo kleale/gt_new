@@ -61,3 +61,28 @@
 .grow{
     flex-grow: 1;
 }
+
+.panel-default > .panel-heading{
+    background-color: inherit;
+    padding: 10px 15px;
+}
+
+.breadcrumb{
+    text-shadow: none;
+}
+
+a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.active:focus{
+    border: 1px solid rgb(0 0 0 / 20%); 
+}
+
+.list-group-item {
+    border: 1px solid rgb(0 0 0 / 20%);
+}
+.pagebg .table{
+    margin: 0
+}
+
+.table>thead>tr>th {
+    border-bottom: 2px solid  rgb(0 0 0 / 20%);
+    vertical-align: bottom;
+}
