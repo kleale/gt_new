@@ -38,7 +38,8 @@ var path = {
     js: 'build/inc/',
     css: 'build/css/',
     img: 'build/img/',
-    fonts: 'build/fonts/'
+    fonts: 'build/fonts/',
+    assets: 'build/assets/'
   },
   src: { //Пути откуда брать исходники
     html: 'src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
@@ -46,14 +47,16 @@ var path = {
     js: 'src/inc/main.js',//В стилях и скриптах нам понадобятся только main файлы
     style: 'src/css/main.scss',
     img: 'src/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
-    fonts: 'src/fonts/**/*.*'
+    fonts: 'src/fonts/**/*.*',
+    assets: 'src/assets/**/*.*'
   },
   watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
     html: 'src/**/*.tpl',
     js: 'src/inc/**/*.js',
     style: 'src/**/*.scss',
     img: 'src/img/**/*.*',
-    fonts: 'src/fonts/**/*.*'
+    fonts: 'src/fonts/**/*.*',
+    assets: 'src/assets/**/*.*'
   },
   assets: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
     css: 'src/assets/css/**/*.*'
@@ -121,6 +124,13 @@ gulp.task('style:build', function () {
     .pipe(reload({ stream: true }));
 });
 
+// Копирование стилей
+gulp.task('assets:build', function () {
+  return gulp.src(path.src.assets)
+    .pipe(gulp.dest(path.build.assets))
+    .pipe(reload({ stream: true }));
+});
+
 // Удалить ненужные стили
 /*
 gulp.task('uncssed', function () {
@@ -159,6 +169,7 @@ gulp.task('build',
     'html:build',
     'js:build',
     'style:build',
+    'assets:build',
     'fonts:build',
     'img:build'
   ]));
@@ -167,6 +178,7 @@ gulp.task('build',
 // Изменения
 gulp.task('watch', function (done) {
     gulp.watch(path.watch.style, gulp.series('style:build')),
+    gulp.watch(path.watch.assets, gulp.series('assets:build')),
     gulp.watch(path.watch.html, gulp.series('html:build')),
     gulp.watch(path.watch.js, gulp.series('js:build')),
     gulp.watch(path.watch.img, gulp.series('img:build')),

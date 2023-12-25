@@ -76,8 +76,6 @@
             </div>
           </div>
 
-          <br />
-
           <div class="panel panel-default panel-login">
             <div class="panel-heading">
               <h3 class="panel-title">Джобы</h3>
@@ -103,8 +101,6 @@
               </tbody>
             </table>
           </div>
-
-          <br />
 
           <div class="panel panel-default panel-login">
             <div class="panel-heading">
@@ -168,8 +164,6 @@
             </div>
           </div>
 
-          <br />
-
           <div class="panel panel-default panel-login">
             <div class="panel-heading">
               <h3 class="panel-title">Логи</h3>
@@ -230,7 +224,7 @@
             </div>
           </div>
 
-          <br />
+         
 
           <div class="panel panel-default panel-login">
             <div class="panel-heading">
@@ -259,9 +253,9 @@
             </div>
           </div>
 
-          <br />
+         
 
-          <br />
+         
           <div class="list-group">
             <div class="list-group-item">Какое-то меню со ссылками</div>
             <a href="#" class="list-group-item active"> Cras justo odio </a>
@@ -270,7 +264,7 @@
             <a href="#" class="list-group-item">Porta ac consectetur ac</a>
             <a href="#" class="list-group-item">Vestibulum at eros</a>
           </div>
-          <br />
+          
 
           <div class="panel panel-default panel-login">
             <div class="panel-heading">
