@@ -31,13 +31,13 @@
 .elevation-4 {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2509803922), 0 10px 10px rgba(0, 0, 0, 0.2196078431) !important;
 }
-[class*=sidebar-dark-] {
+[class*="sidebar-dark-"] {
   background-color: #343a40;
 }
-[class*=sidebar-dark] .brand-link {
+[class*="sidebar-dark"] .brand-link {
   border-bottom: 1px solid #4b545c;
 }
-[class*=sidebar-dark] .user-panel {
+[class*="sidebar-dark"] .user-panel {
   border-bottom: 1px solid #4f5962;
 }
 .mt-2 {
