@@ -207,6 +207,9 @@ a.list-group-item.active:focus {
   flex-direction: column;
   gap: 20px;
 }
+.col .panel {
+  margin-bottom: 20px;
+}
 .td-alert {
   border-left: 1px solid red;
 }
