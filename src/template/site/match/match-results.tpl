@@ -113,9 +113,10 @@ Team X, по прошлым играм."] %}
 					<th scope="row" colspan="2">
 						<div class="playHero">
 							<picture class="hero">
-								<source type="image/webp" srcset="../img/dummy/{{ random(hero) }}.png"/>
-								<img
-								src="./img/dummy/{{ random(hero) }}.png" alt=""/>
+								{# <source type="image/webp" srcset="../img/dummy/{{ random(hero) }}.png"/> #}
+								{# <img src="./img/dummy/{{ random(hero) }}.png" alt=""/> #}
+               
+                <img src="https://escorenews.com/media/game/hero/582/_76/23.webp" alt=""/>
 							<!-- <span>Carry</span> -->
 							</picture>
 							<div class="name">
