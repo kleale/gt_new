@@ -1,7 +1,7 @@
 {% set title = "Вы уходите с game-tournaments.com по внешней ссылке" %}
 <!DOCTYPE html>
 <html>
-  {% include "template/head.tpl" %}
+  {% include "template/head-adm.tpl" %}
   <body class="blockedPage">
     <style>
       html {

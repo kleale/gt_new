@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 <html>
-  {% include "template/head.tpl" %}
+  {% include "template/head-adm.tpl" %}
   <body class="admin sidebar-mini layout-fixed layout-navbar-fixed">
     <div id="wrapper">
         {% include 'template/adm/aside/aside.tpl' %}

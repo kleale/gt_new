@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="assets/css/style.min.css?{{random(rand)}}" />
   <link rel="stylesheet" href="https://game-tournaments.com/assets/css/font-awesome.min.css" />
   <link rel="stylesheet" href="css/main.css?{{random(rand)}}" />
-
+  
   <!--Import jQuery-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <!--<script src="../inc/assets/js/jquery-2.1.1.min.js"></script> -->

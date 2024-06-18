@@ -21,6 +21,7 @@
       <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
         <li><a href="./index.html">Home</a></li>
         <li><a href="./external.html">external</a></li>
+        <li><a href="./match-result-table.html">match-result-table</a></li>
       </ul>
     </div>
   </div>
