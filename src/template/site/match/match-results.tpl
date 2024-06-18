@@ -43,17 +43,17 @@ Team X, по прошлым играм."] %}
 <div class="alert alert-sm alert-info mltText text-center" role="alert">
 	<i class="fa fa-info-circle"></i>
 	Данные в графике поступают без задержки и
-	  опережают время на стримах
+		  опережают время на стримах
 </div>
 <div class="alert alert-sm alert-info mltText text-center" role="alert">
 	<i class="fa fa-info-circle"></i>
 	Данные в графике примерные, точные данные
-	  появятся после обработки реплея матча
+		  появятся после обработки реплея матча
 </div>
 <div class="alert alert-sm alert-info mltText text-center" role="alert">
 	<i class="fa fa-info-circle"></i>
 	Статистика игроков поступает с задержкой и
-	  примерно соответствует времени на стримах (<span class="scd" data-format="1" data-value="2119">35 мин 19 сек</span>)
+		  примерно соответствует времени на стримах (<span class="scd" data-format="1" data-value="2119">35 мин 19 сек</span>)
 </div>
 
 <div class="player-video">
@@ -112,11 +112,12 @@ Team X, по прошлым играм."] %}
 				<tr>
 					<th scope="row" colspan="2">
 						<div class="playHero">
-							<picture class="hero">
-								{# <source type="image/webp" srcset="../img/dummy/{{ random(hero) }}.png"/> #}
+							<picture class="hero tip" title="Hero name">
+								<source
+								type="image/webp" srcset="https://escorenews.com/media/game/hero/582/_76/23.webp"/>
 								{# <img src="./img/dummy/{{ random(hero) }}.png" alt=""/> #}
-               
-                <img src="https://escorenews.com/media/game/hero/582/_76/23.webp" alt=""/>
+								<img
+								src="https://escorenews.com/media/game/hero/582/_76/23.webp" alt=""/>
 							<!-- <span>Carry</span> -->
 							</picture>
 							<div class="name">
@@ -135,8 +136,8 @@ Team X, по прошлым играм."] %}
 						<div class="items">
 							{% for i in 0..3 %}
 								<picture class="item">
-									<source type="image/webp" srcset="../img/dummy/item.png"/>
-									<img src="./img/dummy/item.png" alt=""/>
+									<source type="image/webp" srcset="https://escorenews.com/media/game/item/582/_59/156.webp"/>
+									<img src="https://escorenews.com/media/game/item/582/_59/156.webp" alt=""/>
 								</picture>
 							{% endfor %}
 						</div>
@@ -169,8 +170,12 @@ Team X, по прошлым играм."] %}
 					<th scope="row" colspan="2">
 						<div class="playHero">
 							<picture class="hero tip" title="Hero name">
-								<source type="image/webp" srcset="../img/dummy/{{ random(hero) }}.png"/>
-								<img src="./img/dummy/{{ random(hero) }}.png" alt=""/>
+								<source
+								type="image/webp" srcset="https://escorenews.com/media/game/hero/582/_76/23.webp"/>
+								{# <img src="./img/dummy/{{ random(hero) }}.png" alt=""/> #}
+								<img
+								src="https://escorenews.com/media/game/hero/582/_76/23.webp" alt=""/>
+							<!-- <span>Carry</span> -->
 							</picture>
 							<div class="name">
 								<a href="#">ninjabongie</a>
@@ -188,8 +193,8 @@ Team X, по прошлым играм."] %}
 						<div class="items">
 							{% for i in 0..7 %}
 								<picture class="item tip" title="Item name">
-									<source type="image/webp" srcset="../img/dummy/item.png"/>
-									<img src="./img/dummy/item.png"/>
+									<source type="image/webp" srcset="https://escorenews.com/media/game/item/582/_59/156.webp"/>
+									<img src="https://escorenews.com/media/game/item/582/_59/156.webp"/>
 								</picture>
 							{% endfor %}
 						</div>
@@ -280,16 +285,20 @@ Team X, по прошлым играм."] %}
 	}
 
 	.reztable .items {
-		display: block;
-		text-align: left;
-		min-width: 150px;
+    display: block;
+    text-align: left;
+    min-width: 150px;
+    max-width: 100px;
 	}
 	.item {
-		display: inline-block;
+		display: block;
 		max-width: 21px;
 		overflow: hidden;
 		font-size: 10px;
+		float: left;
+		margin-right: 2px;
 	}
+  
 	.item > * {
 		max-width: 100%;
 		max-height: 100%;
