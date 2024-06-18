@@ -1,0 +1,80 @@
+#block-team-result {
+    background: url("../img/_match/match_bg_582_without_card.jpg") no-repeat 50% 50%;
+    background-size: 750px 410px;
+    overflow: hidden;
+}
+
+#block-team-result .team-name-up {
+    text-align: center;
+    color: #be5c35;
+    font-size:24px;
+}
+
+#block-team-result .team-name-down {
+    text-align: center;
+    color: #a7d848;
+    font-size: 24px;
+}
+
+#block-team-result .heroes {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 5px 5px 0;
+}
+
+#block-team-result .player-nick {
+    padding-top: 5px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#block-team-result .player-nick p {
+    text-align: center;
+    font-weight: normal;
+    font-size: 12px;
+    margin: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#block-team-result .gamevid {
+    position: static;
+    margin: 10px auto;
+}
+
+#block-team-result .hero-title {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 20px;
+    height: 4.5em;
+    vertical-align: bottom;
+    display: flex;
+    align-items: flex-end
+}
+
+#block-team-result .card {
+    background-color:rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 10px #000;
+    width: 18%;
+    height: 11em;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#block-team-result .card picture {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+#block-team-result .card picture img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
