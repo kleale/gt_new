@@ -1,7 +1,7 @@
 {% set title = "Page Name" %}
 {% set user = ["Progamer", "BananaUser", "GromiK",
 "Drax", "kleale", "Bonus", "Gamover"] %}
-{% set game = ["DOTA2", "CSGO", "LOL",
+{% set game = ["LoL", "CSGO", "LOL",
 "HEARTSTONE", "Overwatch", "Fortnite"] %}
 {% set team = ["Movistar Riders",
 "Gambit", "Liquid", "Mineski", "OG", "EG", "Empire", "Ehome", "Navi", "VICI",
@@ -10,7 +10,7 @@
 "team5"] %}
 {% set tourlogo = ["tour1", "tour2", "tour3", "tour4"] %}
 {% set
-gamelogo = ["dota2", "csgo", "lol", "hs", "ow", "fn", "pubg", "rl", "artifact",
+gamelogo = ["LoL", "csgo", "lol", "hs", "ow", "fn", "pubg", "rl", "artifact",
 "rs", "sc2"] %}
 {% set tour = ["Overwatch Contenders 2019", "Kuala-Lumpur Major
 2019", "LCK 2019 Spring", "Dream League 2019" ] %}

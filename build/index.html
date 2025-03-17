@@ -14,9 +14,9 @@
   <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
 
   <!-- Import main styles -->
-  <link rel="stylesheet" href="assets/css/style.min.css?51" />
+  <link rel="stylesheet" href="assets/css/style.min.css?46" />
   <link rel="stylesheet" href="https://game-tournaments.com/assets/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="css/main.css?24" />
+  <link rel="stylesheet" href="css/main.css?51" />
   
   <!--Import jQuery-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -34,6 +34,101 @@
     
 <!-- Site Sripts -->
 <script src="./inc/main.js"></script>
+
+<script>
+            var lang = 'ru';
+            				var tz = new Date().getTimezoneOffset()*(-1);
+			            var timezone = [];
+			var utime = tz*60;
+			var stime = 1742192454;
+			var game_id = 582;
+            var game_eng = 'dota-2';
+            var mscores = {};
+            var i18n = {
+			    'y':'г',
+			    'mes':'мес.',
+			    'w':'н',
+			    'd':'д',
+			    'h':'ч',
+			    'm':'м',
+			    's':'с',
+			    'ago':'назад',
+				'today':'сегодня',
+			    'yesterday':'вчера',
+			    'money_format':'{"6":"M","3":"K"}',
+				'acc_timezone':'Часовой пояс',
+			    'bets_wms': 'Коэффициенты / Прогнозы',
+			    'pr_wms': 'Информация',
+			    'month':'января,февраля,марта,апреля,мая,июня,июля,августа,сентября,октября,ноября,декабря'.split(','),
+			    'month2':'январь,февраль,март,апрель,май,июнь,июль,август,сентябрь,октябрь,ноябрь,декабрь'.split(','),
+			    'timezone':jQuery.parseJSON('[{"t":"UTC -12:00","s":"","d":-720},{"t":"UTC -11:00","s":"","d":-660},{"t":"UTC -10:00","s":"","d":-600},{"t":"UTC -9:00","s":"","d":-540},{"t":"UTC -8:00","s":"PST","d":-480},{"t":"UTC -7:00","s":"PDT","d":-420},{"t":"UTC -6:00","s":"CST","d":-360},{"t":"UTC -5:00","s":"EST","d":-300},{"t":"UTC -4:00","s":"EDT","d":-240},{"t":"UTC -3:30","s":"","d":-210},{"t":"UTC -3:00","s":"CLST","d":-180},{"t":"UTC -2:00","s":"","d":-120},{"t":"UTC -1:00","s":"","d":-60},{"t":"UTC +0:00","s":"","d":0},{"t":"UTC +1:00","s":"CET","d":60},{"t":"UTC +2:00","s":"CEST","d":120},{"t":"UTC +3:00","s":"MSK","d":180},{"t":"UTC +3:30","s":"","d":210},{"t":"UTC +4:00","s":"","d":240},{"t":"UTC +4:30","s":"","d":270},{"t":"UTC +5:00","s":"","d":300},{"t":"UTC +5:30","s":"","d":330},{"t":"UTC +6:00","s":"","d":360},{"t":"UTC +7:00","s":"","d":420},{"t":"UTC +8:00","s":"SGT","d":480},{"t":"UTC +9:00","s":"","d":540},{"t":"UTC +9:30","s":"","d":570},{"t":"UTC +10:00","s":"","d":600},{"t":"UTC +11:00","s":"","d":660},{"t":"UTC +12:00","s":"","d":720}]'),
+				'tournament_none':'Подходящих турниров не найдено',
+			    'tournament_pick':'Выбери турнир',
+			    'team_no_found':'Подходящих команд не найдено',
+			    'team_pick':'Выбери команду',
+			    'player_no_found':'Подходящих игроков не найдено',
+			    'hero_no':'Подходящих героев не найдено',
+			    'hero_pick':'Выбери героя',
+			    'player_pick':'Выбери игрока',
+			    'login_title':'Вход',
+			    'reg_title':'Регистрация',
+                'date_format':'%j% %m%%y%, %h%:%i%'
+		    };
+</script>
+
+<script src="/inc/bootstrap.min.js"></script>
+<script src="/inc/func.js?5"></script>
+<script src="/inc/fancybox2/jquery.fancybox.pack.js?v=2.1.3"></script>
+<script id="" text="" charset="" type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-77Q1YLLK9G"></script>
+<script type="text/javascript" id="" charset="">window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date);gtag("config","G-77Q1YLLK9G");gtag("config","UA-213795943-1");gtag("config","G-TE77PCQE7F");</script>
+<script src="/inc/fancybox2/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<script src="/inc/jquery.trackpad-scroll-emulator.min.js"></script>
+<script src="/inc/perfect-scrollbar.jquery.js"></script>
+<script>
+        page_match = 1;
+        function mvideo(num) {
+            $.ajax({type:'POST',data:{game:game_eng,rid:'matches',ajax:'block_video',data:{id:598095,'num':num}}}).done(function(txt){
+                $('#video').html(txt);
+                $('#videos li').removeClass('active');
+                $('#videos li[rel='+num+']').addClass('active');
+                if ($('#gvlist').length) {
+                	$('#gvlist').TrackpadScrollEmulator({autoHide: false});
+                }
+                mvideo_top();
+            });
+        }
+        function mvideo_top() {
+            var kol = $('#video a.video').length;
+            if ($('#video a.g-rezults').length) kol += 1;
+            if ($('#video a.g-d2m').length) kol += 1;
+            var top = (kol > 3 ? 120 : 200 - kol*20);
+            $('#video .gamevid').css({'top':top+'px'});
+        }
+        function match_result(num) {
+            $.ajax({type:'POST',data:{game:game_eng,rid:'matches',ajax:'match_result',data:{'mid':598095,'num':num}}}).done(function(txt) {
+        		wms('Результаты игры',txt);
+        	});
+        }
+        $(document).ready(function() {
+            mvideo_top();
+            $('.btxt').on('contextmenu', function(e){
+                e.preventDefault();
+            });
+            $('.fancybox').fancybox();
+        	$('.video').fancybox({
+        		arrows : false,
+        		helpers: {
+                    media: true
+                }
+        	});
+        	if ($('#gvlist').length) {
+            	$('#gvlist').TrackpadScrollEmulator({autoHide: false});
+            }
+			
+			$('.match-nav').perfectScrollbar();
+			
+        });
+    </script>
 
 <!--PAGES select only dev-->
 <style>
