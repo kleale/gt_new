@@ -70,9 +70,11 @@
             $('#video .gamevid').css({'top':top+'px'});
         }
         function match_result(num) {
-            $.ajax({type:'POST',data:{game:game_eng,rid:'matches',ajax:'match_result',data:{'mid':598095,'num':num}}}).done(function(txt) {
-        		wms('Результаты игры',txt);
-        	});
+          debugger
+          wms('Результаты игры','data');
+            //$.ajax({type:'POST',data:{game:game_eng,rid:'matches',ajax:'match_result',data:{'mid':598095,'num':num}}}).done(function(txt) {
+        		//wms('Результаты игры',txt);
+        	  //});
         }
         $(document).ready(function() {
             mvideo_top();
@@ -94,6 +96,14 @@
 			
         });
     </script>
+
+
+<div class="modal fade" id="wms" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content"></div>
+	</div>
+</div>
+
 
 <!--PAGES select only dev-->
 <style>

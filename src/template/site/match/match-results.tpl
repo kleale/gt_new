@@ -43,20 +43,20 @@ Team X, по прошлым играм."] %}
 <div class="alert alert-sm alert-info mltText text-center" role="alert">
 	<i class="fa fa-info-circle"></i>
 	Данные в графике поступают без задержки и
-		  опережают время на стримах
+			  опережают время на стримах
 </div>
-<div class="alert alert-sm alert-info mltText text-center" role="alert">
+{# <div class="alert alert-sm alert-info mltText text-center" role="alert">
 	<i class="fa fa-info-circle"></i>
 	Данные в графике примерные, точные данные
-		  появятся после обработки реплея матча
+			  появятся после обработки реплея матча
 </div>
 <div class="alert alert-sm alert-info mltText text-center" role="alert">
 	<i class="fa fa-info-circle"></i>
 	Статистика игроков поступает с задержкой и
-		  примерно соответствует времени на стримах (<span class="scd" data-format="1" data-value="2119">35 мин 19 сек</span>)
-</div>
+			  примерно соответствует времени на стримах (<span class="scd" data-format="1" data-value="2119">35 мин 19 сек</span>)
+</div> #}
 
-<div class="player-video">
+{# <div class="player-video">
 	<ul id="videos" class="nav nav-tabs">
 		<li>
 			<a href="javascript:;" id="vidtab">Игра 1
@@ -79,6 +79,7 @@ Team X, по прошлым играм."] %}
 		</li>
 	</ul>
 </div>
+
 <div class="reztable table-responsive">
 	<table class="table table-striped table-sm table-hover">
 		<thead>
@@ -213,7 +214,7 @@ Team X, по прошлым играм."] %}
 			{% endfor %}
 		</tbody>
 	</table>
-</div>
+</div> #}
 
 <style>
 	.reztable .bb {
@@ -285,10 +286,10 @@ Team X, по прошлым играм."] %}
 	}
 
 	.reztable .items {
-    display: block;
-    text-align: left;
-    min-width: 150px;
-    max-width: 100px;
+		display: block;
+		text-align: left;
+		min-width: 150px;
+		max-width: 100px;
 	}
 	.item {
 		display: block;
@@ -298,7 +299,7 @@ Team X, по прошлым играм."] %}
 		float: left;
 		margin-right: 2px;
 	}
-  
+
 	.item > * {
 		max-width: 100%;
 		max-height: 100%;
