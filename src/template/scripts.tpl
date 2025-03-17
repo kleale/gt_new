@@ -43,14 +43,12 @@
 		    };
 </script>
 
-<script src="/inc/bootstrap.min.js"></script>
-<script src="/inc/func.js?5"></script>
-<script src="/inc/fancybox2/jquery.fancybox.pack.js?v=2.1.3"></script>
-<script id="" text="" charset="" type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-77Q1YLLK9G"></script>
-<script type="text/javascript" id="" charset="">window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date);gtag("config","G-77Q1YLLK9G");gtag("config","UA-213795943-1");gtag("config","G-TE77PCQE7F");</script>
-<script src="/inc/fancybox2/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
-<script src="/inc/jquery.trackpad-scroll-emulator.min.js"></script>
-<script src="/inc/perfect-scrollbar.jquery.js"></script>
+<script src="https://game-tournaments.com/inc/bootstrap.min.js"></script>
+<script src="https://game-tournaments.com/inc/func.js?5"></script>
+<script src="https://game-tournaments.com/inc/fancybox2/jquery.fancybox.pack.js?v=2.1.3"></script>
+<script src="https://game-tournaments.com/inc/fancybox2/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<script src="https://game-tournaments.com/inc/jquery.trackpad-scroll-emulator.min.js"></script>
+<script src="https://game-tournaments.com/inc/perfect-scrollbar.jquery.js"></script>
 <script>
         page_match = 1;
         function mvideo(num) {
