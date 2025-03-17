@@ -332,9 +332,10 @@
 												<s>20</s>Doom, hard
 											</span>
 										</div>
+										
 									</div>
 								</th>
-								<td></td>
+								<td>{% if i == 2 %}<div class="badges"><span class="fb-danger">FB</span></div>{% endif %}</td>
 								<td>{{random(12)}}</td>
 								<td>{{random(12)}}</td>
 								<td>{{random(22)}}</td>
