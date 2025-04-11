@@ -1,4 +1,4 @@
-{% set title = "Доступ с вашего IP-адреса временно ограничен" %}
+{% set title = "GT DEV" %}
 
 <!DOCTYPE html>
 <html>

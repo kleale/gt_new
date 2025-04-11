@@ -1,0 +1,2289 @@
+
+
+<!DOCTYPE html>
+<html>
+	
+<head lang="en">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GT DEV</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,cyrillic" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/png" href="/favicon32.png" />
+  <!-- <link rel="stylesheet" href="/assets/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+
+  <!-- Import main styles -->
+  <link rel="stylesheet" href="assets/css/style.min.css?35" />
+  <link rel="stylesheet" href="https://game-tournaments.com/assets/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/main.css?13" />
+  
+  <!--Import jQuery-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <!--<script src="../inc/assets/js/jquery-2.1.1.min.js"></script> -->
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <!-- <script src="../inc/assets/js/bootstrap.min.js"></script>  -->
+</head>
+
+	<body>
+		<div id="wrapper">
+			<header id="bar" class="topbar">
+  <a id="menu-toggle" class="bartoggle" href="javascript:;"
+    ><i class="fa fa-fw fa-bars"></i
+  ></a>
+  <div class="pull-right">
+    <!-- presentPopover  -->
+    <style>
+      .presentButton {
+        display: none;
+      }
+      @keyframes tilt-n-move-shaking {
+        0% {
+          transform: translate(0, 0) rotate(0deg);
+        }
+        5% {
+          transform: translate(1px, 1px) rotate(5deg);
+        }
+        10% {
+          transform: translate(0, 0) rotate(0deg);
+        }
+        15% {
+          transform: translate(-1px, 1px) rotate(-5deg);
+        }
+        20% {
+          transform: translate(0, 0) rotate(0deg);
+        }
+        25% {
+          transform: translate(0, 0) rotate(0deg);
+        }
+        30% {
+          transform: translate(1px, 1px) rotate(5deg);
+        }
+        40% {
+          transform: translate(0, 0) rotate(0deg);
+        }
+        50% {
+          transform: translate(-1px, 1px) rotate(-5deg);
+        }
+        55% {
+          transform: translate(0, 0) rotate(0deg);
+        }
+      }
+      .presentButton {
+        animation: tilt-n-move-shaking 1s infinite;
+
+        display: inline-flex;
+        height: 30px;
+        width: 30px;
+        background: #ffffff17;
+        margin: 5px 0;
+        border-radius: 3px;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        border: 0;
+        padding: 0;
+      }
+
+      .presentButton svg {
+        fill: #91cdd7;
+      }
+
+      .presentButton:hover,
+      .presentButton:focus,
+      .presentButton:active {
+        background: #91cdd7;
+        outline: 0;
+        animation: none;
+      }
+
+      .presentButton:hover svg,
+      .presentButton:focus svg,
+      .presentButton:active svg {
+        fill: #fff;
+      }
+
+      .presentButton:hover .presentPopover,
+      .presentButton:focus .presentPopover,
+      .presentButton:active .presentPopover {
+        position: absolute;
+        display: block;
+      }
+
+      .presentPopover {
+        z-index: 2000;
+        display: none;
+        position: absolute;
+        top: 20px;
+        left: 0;
+        transform: translateX(-50%);
+        margin-left: 15px;
+        padding-top: 20px;
+      }
+
+      .presentPopover .popover-body {
+        border: 1px solid #91cdd7;
+        border-radius: 4px;
+        overflow: hidden;
+        display: block;
+      }
+
+      .presentPopover .arrow {
+        position: absolute;
+        display: block;
+        width: 10px;
+        height: 10px;
+        margin: 0 4px;
+        top: 10px;
+        left: 50%;
+        margin-left: -10px;
+      }
+
+      .presentPopover .arrow::before,
+      .presentPopover .arrow::after {
+        position: absolute;
+        display: block;
+        content: "";
+        border-color: transparent;
+        border-bottom-color: transparent;
+        border-style: solid;
+      }
+
+      .presentPopover > .arrow::before {
+        top: 0;
+        border-width: 0 10px 10px 10px;
+        border-bottom-color: rgba(0, 0, 0, 0.25);
+      }
+
+      .presentPopover > .arrow::after {
+        top: 1px;
+        border-width: 0 10px 10px 10px;
+        border-bottom-color: #91cdd7;
+      }
+    </style>
+    <noindex>
+      <button
+        href="javascript:;"
+        class="bar-icon presentButton"
+        data-toggle="presentPopover"
+        data-img="/media/a/banner554.gif"
+      >
+        <svg
+          version="1.1"
+          id="Layer_1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px"
+          y="0px"
+          viewBox="0 0 512 512"
+          style="enable-background: new 0 0 512 512"
+          xml:space="preserve"
+          width="20px"
+          height="20px"
+        >
+          <g>
+            <path
+              d="M141.591,17.586C130.542,6.712,115.386,0,98.658,0c-33.81,0-61.217,27.408-61.217,61.217s27.408,61.217,61.217,61.217 h79.429V85.598c0-9.533,1.729-18.668,4.876-27.117L141.591,17.586z"
+            ></path>
+          </g>
+          <g>
+            <path
+              d="M413.342,0c-16.728,0-31.884,6.712-42.935,17.586l-41.371,40.893c3.148,8.451,4.876,17.586,4.876,27.118v36.837h79.429 c33.81,0,61.217-27.408,61.217-61.217S447.152,0,413.342,0z"
+            ></path>
+          </g>
+          <g>
+            <path
+              d="M256,41.077c-24.588,0-44.522,19.933-44.522,44.522v43.008h89.043V85.599C300.522,61.01,280.588,41.077,256,41.077z"
+            ></path>
+          </g>
+          <g>
+            <polygon
+              points="333.913,278.261 333.913,398.519 256,340.084 178.087,398.519 178.087,278.261 55.652,278.261 55.652,512 456.348,512 456.348,278.261"
+            ></polygon>
+          </g>
+          <g>
+            <rect
+              x="333.913"
+              y="155.826"
+              width="155.826"
+              height="89.043"
+            ></rect>
+          </g>
+          <g>
+            <rect x="22.261" y="155.826" width="155.826" height="89.043"></rect>
+          </g>
+          <g>
+            <polygon
+              points="211.478,155.826 211.478,331.737 256,298.346 300.522,331.737 300.522,155.826"
+            ></polygon>
+          </g>
+        </svg>
+        <div class="presentPopover" role="tooltip">
+          <div class="arrow"></div>
+          <a target="_blank" href="/go?n=554" class="popover-body">
+            <img
+              src="https://game-tournaments.com/media/a/banner554.gif"
+              width="145px"
+              class="yaadstracker"
+              id="trck_554"
+            />
+          </a>
+        </div>
+      </button>
+    </noindex>
+
+    <script>
+      //present popover
+      $(document).ready(function () {
+        if (autoShowStatus()) {
+          if ($('[data-toggle="presentPopover"]')) {
+            var maxScroll =
+              (document.body.scrollHeight - $(window).innerHeight()) / 2;
+            $(window).scroll(function () {
+              if (
+                $(window).scrollTop() > document.body.scrollHeight / 4 ||
+                $(window).scrollTop() >= maxScroll
+              ) {
+                $('[data-toggle="presentPopover"]').trigger("focus");
+              }
+            });
+          }
+        }
+        $('[data-toggle="presentPopover"]').on("focus", function () {
+          autoShow();
+        });
+        function autoShow() {
+          setAutoShowCookie();
+          $(window).off("scroll");
+        }
+        function autoShowStatus() {
+          var status = false;
+          if ($(window).innerWidth() > 769) {
+            if (document.cookie.indexOf("autoshow=") == -1) {
+              status = true;
+            }
+          }
+          return status;
+        }
+        function setAutoShowCookie() {
+          const expires = new Date();
+          expires.setDate(expires.getDate() + 7);
+          document.cookie = `autoshow=true;expires=${expires.toGMTString()};path=/;secure`;
+        }
+      });
+    </script>
+    <a
+      href="javascript:;"
+      class="pull-left gttime hidden-xs active"
+      onclick="get_time()"
+      ><i class="fa fa-fw fa-clock-o"></i> <span class="utime">17:32 MSK</span>
+      <span class="caret"></span
+    ></a>
+    <div class="btn-group btn-lang">
+      <a
+        class="pull-left gttime dropdown-toggle"
+        href="javascript:;"
+        data-toggle="dropdown"
+        >Language <span class="caret"></span
+      ></a>
+      <ul class="dropdown-menu">
+        <li>
+          <a
+            href="/dota-2/international-2024/eastern-europe/9-pandas-vs-night-pulse-563778"
+            ><img src="https://game-tournaments.com/media/flags/3.svg" class="flag" /> Русский</a
+          >
+        </li>
+        <li>
+          <a
+            href="/en/dota-2/international-2024/eastern-europe/9-pandas-vs-night-pulse-563778"
+            ><img src="https://game-tournaments.com/media/flags/2.svg" class="flag" /> English</a
+          >
+        </li>
+      </ul>
+    </div>
+    <span id="user"
+      ><div class="entereg pull-right">
+        <a class="btn btn-sm btn-primary" href="/login">Login</a>
+        <a class="btn btn-sm btn-primary" href="/reg">Sign up</a>
+      </div></span
+    >
+  </div>
+  <ol
+    id="breadcumbs"
+    class="breadcrumb hidden-xs"
+    itemscope=""
+    itemtype="https://schema.org/BreadcrumbList"
+  >
+    <li
+      itemprop="itemListElement"
+      itemscope=""
+      itemtype="https://schema.org/ListItem"
+    >
+      <a itemprop="item" href="/en/">
+        <span itemprop="name">GT</span>
+      </a>
+      <meta itemprop="position" content="1" />
+    </li>
+    <li
+      itemprop="itemListElement"
+      itemscope=""
+      itemtype="https://schema.org/ListItem"
+    >
+      <a itemprop="item" title="Dota 2" href="/en/dota-2">
+        <span itemprop="name">Dota 2</span>
+      </a>
+      <meta itemprop="position" content="2" />
+    </li>
+    <li
+      itemprop="itemListElement"
+      itemscope=""
+      itemtype="https://schema.org/ListItem"
+    >
+      <a itemprop="item" title="TI 2024" href="/en/dota-2/international-2024">
+        <span itemprop="name">TI 2024</span>
+      </a>
+      <meta itemprop="position" content="3" />
+    </li>
+    <li
+      itemprop="itemListElement"
+      itemscope=""
+      itemtype="https://schema.org/ListItem"
+    >
+      <a
+        itemprop="item"
+        title="Closed Qualifier"
+        href="/en/dota-2/international-2024/eastern-europe"
+      >
+        <span itemprop="name">Closed Qualifier</span>
+      </a>
+      <meta itemprop="position" content="4" />
+    </li>
+    <li
+      itemprop="itemListElement"
+      itemscope=""
+      itemtype="https://schema.org/ListItem"
+    >
+      <span itemprop="name">9Pandas vs NP</span>
+      <meta itemprop="position" content="5" />
+    </li>
+  </ol>
+</header>
+
+			<a rel="nofollow" class="bgad yaadstracker" href="/go?n=707" target="_blank" style="background:url(https://game-tournaments.com/media/a/banner707.gif) no-repeat scroll 50% 0px #020001" id="trck_707" onclick="sharedYMClick(this)"></a>
+<style>
+	#page-content-wrapper {
+		padding-top: 50px !important;
+	}
+	.bgad {
+		display: block;
+		height: 1220px;
+		width: 2100px;
+		position: fixed;
+		top: 30px;
+		left: calc(50% + 30px);
+		right: 0;
+		bottom: 0;
+		z-index: 1;
+		transform: translate(-50%, 0);
+		margin-left: 0;
+		background-size: 1890px !important;
+	}
+	body {
+		background-color: #020001 !important;
+	}
+	@media(max-width: 768px) {
+		.bgad {
+			display: none;
+		}
+	}
+</style>
+<noindex>
+	<a rel="nofollow" href="/go?n=775" class="abr-mob" target="_blank">
+		<img src="https://game-tournaments.com/media/a/banner775.gif" class="yaadstracker" height="120" id="trck_775" onclick="sharedYMClick(this)">
+	</a>
+</noindex>
+<style>
+	div.abr-mob,
+	a.abr-mob {
+		display: none;
+	}
+	@media(max-width: 992px) {
+		a.abr {
+			display: none;
+		}
+		div.abr-mob,
+		a.abr-mob {
+			display: block;
+			z-index: 10;
+			position: relative;
+			padding: 50px 0 0;
+			margin-bottom: -50px;
+		}
+		a.abr-mob img {
+			width: 100%
+		}
+	}
+</style>
+
+			<div id="sidebar-wrapper">
+	<div class="sm-wrap">
+		<ul class="sidebar-nav">
+			<li class="sidebar-brand">
+				<a href="/en/dota-2" title="Events and Matches Dota 2" class="logo"><img src="https://game-tournaments.com/assets/img/logo-582.png" alt="Dota 2" class="png"></a>
+			</li>
+			<li>
+				<a href="/en/dota-2/matches" title="Matches" class="hvr-push">
+					<i class="fa fa-fw fa-calendar"></i>
+					<span>Matches</span>
+				</a>
+			</li>
+			<li class="hasSubmenu active">
+				<a href="javascript:;" class="mob-sub-opener">
+					<i class="fa fa-plus"></i>
+				</a>
+				<a href="/en/dota-2/tournaments" class="hvr-push" title="Dota 2 Events">
+					<i class="fa fa-trophy"></i>
+					<span>Dota 2 Events</span>
+				</a>
+				<ul class="sidebar-sub-nav">
+					<li class="firsth">
+						<a href="/en/dota-2/tournaments" title="Dota 2 Dota 2 Events">
+							<i class="fa fa-trophy"></i>Dota 2 Dota 2 Events</a>
+					</li>
+					<li class="active">
+						<a href="/en/dota-2/international-2024" class="tname" title="TI 2024">TI 2024</a>
+					</li>
+					<li>
+						<a href="/en/dota-2/leon-masters-1" class="tname" title="Leon Masters #1">Leon Masters #1</a>
+					</li>
+					<li>
+						<a href="/en/dota-2/res-regional-series-sea-3" class="tname" title="RES RS SEA #3">RES RS SEA #3</a>
+					</li>
+					<li>
+						<a href="/en/dota-2/blue-dragon-cup" class="tname" title="Blue Dragon Cup">Blue Dragon Cup</a>
+					</li>
+					<li class="mheader">Recently finished</li>
+					<li>
+						<a href="/en/dota-2/european-pro-league-world-series-america-season-11" class="tname" title="EPL World AM S11">EPL World AM S11</a>
+					</li>
+					<li>
+						<a href="/en/dota-2/higames-invitational" class="tname" title="HiGames Invitational">HiGames Invitational</a>
+					</li>
+					<li>
+						<a href="/en/dota-2/fissure-universe-episode-2" class="tname" title="FISSURE Universe Ep 2">FISSURE Universe Ep 2</a>
+					</li>
+					<li>
+						<a href="/en/dota-2/dreamleague-season-23" class="tname" title="DreamLeague S23">DreamLeague S23</a>
+					</li>
+					<li>
+						<a href="/en/dota-2/res-regional-series-eu-2" class="tname" title="RES RS EU #2">RES RS EU #2</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="/en/dota-2/news" title="News" class="hvr-push">
+					<i class="fa fa-coffee"></i>
+					<span>News</span>
+				</a>
+			</li>
+			<li>
+				<a href="/en/dota-2/team" title="Teams" class="hvr-push">
+					<i class="fa fa-group"></i>
+					<span>Teams</span>
+				</a>
+			</li>
+			<li>
+				<a href="/en/dota-2/player" title="Players" class="hvr-push">
+					<i class="fa fa-user"></i>
+					<span>Players</span>
+				</a>
+			</li>
+			<li>
+				<a href="/en/dota-2/bets" title="Match betting" class="hvr-push">
+					<i class="fa fa-usd"></i>
+					<span>Bets</span>
+				</a>
+			</li>
+			<li>
+				<a href="/en/dota-2/video" title="Video / Match vods" class="hvr-push">
+					<i class="fa fa-play-circle-o"></i>
+					<span>VODs</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+			
+
+			<section class="page" id="page-content-wrapper">
+				<div class="container">
+					<div class="pagebg">
+						<div class="row">
+							<div class="col-sm-12 col-md-8">
+
+								<div class="teamheader clearfix">
+	<div class="row">
+		<div class="col-sm-3">
+			<picture>
+				<source srcset="https://game-tournaments.com/media/logo/_90/t97509.webp, https://game-tournaments.com/media/logo/t97509.webp 2x" type="image/webp">
+				<source srcset="https://game-tournaments.com/media/logo/_90/t97509.png, https://game-tournaments.com/media/logo/t97509.png 2x">
+				<img style="max-width:100px; max-height:100px" src="https://game-tournaments.com/media/logo/_90/t97509.png" alt="FLCN" height="90px">
+			</picture>
+		</div>
+		<div class="col-sm-9 text-left">
+			<h1>FLCN
+				<small>Team Falcons</small>
+				<div>Саудовская Аравия
+					<img style="width: 20px;" src="https://game-tournaments.com/media/flags/115.svg">
+				</div>
+			</h1>
+		</div>
+	</div>
+	<div class="teamdescr" style="padding: 25px 25px 0; text-align: left;">
+		<p>
+			<b>ESL One Raleigh 2025&nbsp;</b>— чемпионат по Dota 2 от турнирного оператора ESL. В ивенте будут сражаться четыре коллектива, имеющих наибольшее количество очков рейтинга ESL Pro Tour, и восемь команд, прошедшие региональные квалификации.&nbsp;Участники разыграют между собой общий призовой фонд в размере 1,000,000 USD.&nbsp;<b>ESL One Raleigh 2025</b>
+			пройдёт с 7 по 13 апреля в Роли, штат Северная Каролина, США. Итоговые матчи чемпионата пройдут со зрителями на Raleigh Convention Center.
+			</p>
+	</div>
+	<div class="row2 teamstat clearfix" style="padding-top: 15px">
+		<div class="col col-xs-3">
+			<label>место в
+				<a href="/dota-2/team">мире</a>
+			</label>
+			<b>#2</b>
+		</div>
+		<div class="col col-xs-3">
+			<label>место в
+				<a href="/dota-2/team?region=5">MENA</a>
+			</label>
+			<b>–</b>
+		</div>
+		<div class="col col-xs-3">
+			<label>Форма*</label>
+			<b>–</b>
+		</div>
+		<div class="col col-xs-3">
+			<label>побед</label>
+			<b>144
+				<sup>65%</sup>
+			</b>
+		</div>
+	</div>
+</div>
+
+
+								<div class="box clearfix">
+	<form id="filter_current" action="" method="get">
+		<input type="hidden" value="1" name="s">
+		<input type="hidden" value="gg" name="type">
+		<input type="hidden" value="0" name="score">
+		<input type="hidden" value="97509" name="team">
+	</form>
+	<h2>Ближайшие матчи FLCN
+		<figure class="odtip scorecheck" title="" data-original-title="Показать счет"><input id="scrorecur" type="checkbox" class="pull-right resultcheck" onclick="show_scores('current',this.checked);"><label for="scrorecur"></label>
+		</figure>
+		<a class="pull-right mrefresh" onclick="match_pages('current',0);" href="javascript:;">
+			<i class="fa fa-history"></i>
+		</a>
+	</h2>
+	<div id="block_matches_current" class="table-responsive">
+		<table class="matches table table-striped table-hover">
+			<tbody>
+				<tr rel="580790">
+					<td style="position:relative"></td>
+					<td>
+						<a href="/dota-2/esl-one-raleigh-2025/playoff/falcons-vs-tbd-580790" title="Матч FLCN против TBD" class="mlink">
+							<span>
+								<span rel="97509" style="vertical-align: middle;" class="teamname c1">
+									<b>FLCN</b>
+								</span>
+								<img class="flag" src="https://game-tournaments.com/media/flags/115.svg" width="16" height="16">
+							</span>
+							<span>
+								<span class="bet-percentage bet1"></span>
+								<span class="vs">
+									vs
+								</span>
+								<span class="bet-percentage bet2"></span>
+							</span>
+							<span>
+								<img class="flag" src="https://game-tournaments.com/media/flag/582-no.png" width="16" height="16">
+								<span rel="" style="vertical-align: middle;" class="teamname c2">
+									<b>TBD</b>
+								</span>
+							</span>
+						</a>
+					</td>
+					<td class="mtime" style="position:relative; width: 95px;">
+						<span class="lives">
+							<i class="fa fa-youtube-play livevid"></i>
+						</span>
+						<span class="live-in">
+							<span class="sct" data-format="%j% %m%%y%, %h%:%i%" data-time="2025-04-12 16:00:00">12 апреля, 19:00</span>
+						</span>
+					</td>
+					<td class="tournament" style="width: 40px;">
+						<a class="ta odtip" href="/dota-2/esl-one-raleigh-2025/playoff" title="" data-original-title="ESL One Raleigh 2025">
+							<span class="tournament-icon">
+								<picture>
+									<source srcset="https://game-tournaments.com/media/event/_30/e9493.webp, https://game-tournaments.com/media/event/_60/e9493.webp 2x" type="image/webp">
+									<source srcset="https://game-tournaments.com/media/event/_30/e9493.png, https://game-tournaments.com/media/event/_60/e9493.png 2x">
+									<img src="https://game-tournaments.com/media/event/_30/e9493.png" loading="lazy" alt="ESL One Raleigh 2025" style="height: 21px;max-width: 21px;object-fit: contain;aspect-ratio: 3/2;">
+								</picture>
+							</span>
+						</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<div class="box clearfix">
+	<form id="filter_past" action="" method="get">
+		<input type="hidden" value="1" name="s">
+		<input type="hidden" value="gg" name="type">
+		<input type="hidden" value="0" name="score">
+		<input type="hidden" value="97509" name="team">
+	</form>
+	<h2>Последние матчи FLCN
+		<figure class="odtip scorecheck" title="" data-original-title="Показать счет"><input id="scrorepast" type="checkbox" class="pull-right resultcheck" onclick="show_scores('past',this.checked);"><label for="scrorepast"></label>
+		</figure>
+		<a class="pull-right mrefresh" onclick="match_pages('past',0);" href="javascript:;">
+			<i class="fa fa-history"></i>
+		</a>
+	</h2>
+	<div id="block_matches_past" class="table-responsive">
+		<table class="matches table table-striped table-hover">
+			<tbody>
+				<tr rel="580785">
+					<td style="position:relative"></td>
+					<td>
+						<a href="/dota-2/esl-one-raleigh-2025/playoff/falcons-vs-spirit-580785" title="Матч FLCN против TSpirit" class="mlink">
+							<span>
+								<span rel="97509" style="vertical-align: middle;" class="teamname c1">
+									<b>FLCN</b>
+								</span>
+								<img class="flag" src="https://game-tournaments.com/media/flags/115.svg" width="16" height="16">
+							</span>
+							<span>
+								<span class="bet-percentage bet1">(2.15)</span>
+								<span class="vs">
+									<span class="mbutton tresult" data-mid="580785" data-txt="счет" data-score="1 : 2" data-time="" title="Показать счет матча" onclick="return show_score(this,1);">счет</span>
+								</span>
+								<span class="bet-percentage bet2">(1.68)</span>
+							</span>
+							<span>
+								<img class="flag" src="https://game-tournaments.com/media/flags/37.svg" width="16" height="16">
+								<span rel="6224" style="vertical-align: middle;" class="teamname c2">
+									<b>TSpirit</b>
+								</span>
+							</span>
+						</a>
+					</td>
+					<td class="mtime" style="position:relative; width: 95px;">
+						<span class="lives">
+							<i class="fa fa-youtube-play livevid"></i>
+						</span>
+						<span class="live-in">
+							<span class="sct" data-format="%j% %m%%y%, %h%:%i%" data-time="2025-04-10 19:30:00">10 апреля, 22:30</span>
+						</span>
+					</td>
+					<td class="tournament" style="width: 40px;">
+						<a class="ta odtip" href="/dota-2/esl-one-raleigh-2025/playoff" title="" data-original-title="ESL One Raleigh 2025">
+							<span class="tournament-icon">
+								<picture>
+									<source srcset="https://game-tournaments.com/media/event/_30/e9493.webp, /media/event/_60/e9493.webp 2x" type="image/webp">
+									<source srcset="https://game-tournaments.com/media/event/_30/e9493.png, /media/event/_60/e9493.png 2x">
+									<img src="https://game-tournaments.com/media/event/_30/e9493.png" loading="lazy" alt="ESL One Raleigh 2025" style="height: 21px;max-width: 21px;object-fit: contain;aspect-ratio: 3/2;">
+								</picture>
+							</span>
+						</a>
+					</td>
+				</tr>
+				<tr rel="600546">
+					<td style="position:relative"></td>
+					<td>
+						<a href="/dota-2/esl-one-raleigh-2025/group-stage/tidebound-vs-falcons-600546" title="Матч Tb против FLCN" class="mlink">
+							<span>
+								<span rel="101587" style="vertical-align: middle;" class="teamname c1">
+									<b>Tb</b>
+								</span>
+								<img class="flag" src="https://game-tournaments.com/media/flags/4.svg" width="16" height="16">
+							</span>
+							<span>
+								<span class="bet-percentage bet1">(5.00)</span>
+								<span class="vs">
+									<span class="mbutton tresult" data-mid="600546" data-txt="счет" data-score="1 : 1" data-time="" title="Показать счет матча" onclick="return show_score(this,1);">счет</span>
+								</span>
+								<span class="bet-percentage bet2">(2.50)</span>
+							</span>
+							<span>
+								<img class="flag" src="https://game-tournaments.com/media/flags/115.svg" width="16" height="16">
+								<span rel="97509" style="vertical-align: middle;" class="teamname c2">
+									<b>FLCN</b>
+								</span>
+							</span>
+						</a>
+					</td>
+					<td class="mtime" style="position:relative; width: 95px;">
+						<span class="lives">
+							<i class="fa fa-youtube-play livevid"></i>
+						</span>
+						<span class="live-in">
+							<span class="sct" data-format="%j% %m%%y%, %h%:%i%" data-time="2025-04-09 18:53:00">09 апреля, 21:53</span>
+						</span>
+					</td>
+					<td class="tournament" style="width: 40px;">
+						<a class="ta odtip" href="/dota-2/esl-one-raleigh-2025/group-stage" title="" data-original-title="ESL One Raleigh 2025">
+							<span class="tournament-icon">
+								<picture>
+									<source srcset="https://game-tournaments.com/media/event/_30/e9493.webp, /media/event/_60/e9493.webp 2x" type="image/webp">
+									<source srcset="https://game-tournaments.com/media/event/_30/e9493.png, /media/event/_60/e9493.png 2x">
+									<img src="https://game-tournaments.com/media/event/_30/e9493.png" loading="lazy" alt="ESL One Raleigh 2025" style="height: 21px;max-width: 21px;object-fit: contain;aspect-ratio: 3/2;">
+								</picture>
+							</span>
+						</a>
+					</td>
+				</tr>
+				<tr rel="600540">
+					<td style="position:relative"></td>
+					<td>
+						<a href="/dota-2/esl-one-raleigh-2025/group-stage/falcons-vs-avulus-600540" title="Матч FLCN против AVULUS" class="mlink">
+							<span>
+								<span rel="97509" style="vertical-align: middle;" class="teamname c1">
+									<b>FLCN</b>
+								</span>
+								<img class="flag" src="https://game-tournaments.com/media/flags/115.svg" width="16" height="16">
+							</span>
+							<span>
+								<span class="bet-percentage bet1">(1.60)</span>
+								<span class="vs">
+									<span class="mbutton tresult" data-mid="600540" data-txt="счет" data-score="1 : 1" data-time="" title="Показать счет матча" onclick="return show_score(this,1);">счет</span>
+								</span>
+								<span class="bet-percentage bet2">(7.50)</span>
+							</span>
+							<span>
+								<img class="flag" src="https://game-tournaments.com/media/flags/25.svg" width="16" height="16">
+								<span rel="100382" style="vertical-align: middle;" class="teamname c2">
+									<b>AVULUS</b>
+								</span>
+							</span>
+						</a>
+					</td>
+					<td class="mtime" style="position:relative; width: 95px;">
+						<span class="lives">
+							<i class="fa fa-youtube-play livevid"></i>
+						</span>
+						<span class="live-in">
+							<span class="sct" data-format="%j% %m%%y%, %h%:%i%" data-time="2025-04-09 00:04:00">09 апреля, 03:04</span>
+						</span>
+					</td>
+					<td class="tournament" style="width: 40px;">
+						<a class="ta odtip" href="/dota-2/esl-one-raleigh-2025/group-stage" title="" data-original-title="ESL One Raleigh 2025">
+							<span class="tournament-icon">
+								<picture>
+									<source srcset="https://game-tournaments.com/media/event/_30/e9493.webp, /media/event/_60/e9493.webp 2x" type="image/webp">
+									<source srcset="https://game-tournaments.com/media/event/_30/e9493.png, /media/event/_60/e9493.png 2x">
+									<img src="https://game-tournaments.com/media/event/_30/e9493.png" loading="lazy" alt="ESL One Raleigh 2025" style="height: 21px;max-width: 21px;object-fit: contain;aspect-ratio: 3/2;">
+								</picture>
+							</span>
+						</a>
+					</td>
+				</tr>
+				<tr rel="600543">
+					<td style="position:relative"></td>
+					<td>
+						<a href="/dota-2/esl-one-raleigh-2025/group-stage/heroic-vs-falcons-600543" title="Матч Heroic против FLCN" class="mlink">
+							<span>
+								<span rel="97472" style="vertical-align: middle;" class="teamname c1">
+									<b>Heroic</b>
+								</span>
+								<img class="flag" src="https://game-tournaments.com/media/flags/6.svg" width="16" height="16">
+							</span>
+							<span>
+								<span class="bet-percentage bet1">(11.00)</span>
+								<span class="vs">
+									<span class="mbutton tresult" data-mid="600543" data-txt="счет" data-score="0 : 2" data-time="" title="Показать счет матча" onclick="return show_score(this,1);">счет</span>
+								</span>
+								<span class="bet-percentage bet2">(1.75)</span>
+							</span>
+							<span>
+								<img class="flag" src="https://game-tournaments.com/media/flags/115.svg" width="16" height="16">
+								<span rel="97509" style="vertical-align: middle;" class="teamname c2">
+									<b>FLCN</b>
+								</span>
+							</span>
+						</a>
+					</td>
+					<td class="mtime" style="position:relative; width: 95px;">
+						<span class="lives">
+							<i class="fa fa-youtube-play livevid"></i>
+						</span>
+						<span class="live-in">
+							<span class="sct" data-format="%j% %m%%y%, %h%:%i%" data-time="2025-04-08 21:28:00">09 апреля, 00:28</span>
+						</span>
+					</td>
+					<td class="tournament" style="width: 40px;">
+						<a class="ta odtip" href="/dota-2/esl-one-raleigh-2025/group-stage" title="" data-original-title="ESL One Raleigh 2025">
+							<span class="tournament-icon">
+								<picture>
+									<source srcset="https://game-tournaments.com/media/event/_30/e9493.webp, /media/event/_60/e9493.webp 2x" type="image/webp">
+									<source srcset="https://game-tournaments.com/media/event/_30/e9493.png, /media/event/_60/e9493.png 2x">
+									<img src="https://game-tournaments.com/media/event/_30/e9493.png" loading="lazy" alt="ESL One Raleigh 2025" style="height: 21px;max-width: 21px;object-fit: contain;aspect-ratio: 3/2;">
+								</picture>
+							</span>
+						</a>
+					</td>
+				</tr>
+				<tr rel="600536">
+					<td style="position:relative"></td>
+					<td>
+						<a href="/dota-2/esl-one-raleigh-2025/group-stage/falcons-vs-betboom-600536" title="Матч FLCN против BB" class="mlink">
+							<span>
+								<span rel="97509" style="vertical-align: middle;" class="teamname c1">
+									<b>FLCN</b>
+								</span>
+								<img class="flag" src="https://game-tournaments.com/media/flags/115.svg" width="16" height="16">
+							</span>
+							<span>
+								<span class="bet-percentage bet1">(4.00)</span>
+								<span class="vs">
+									<span class="mbutton tresult" data-mid="600536" data-txt="счет" data-score="2 : 0" data-time="" title="Показать счет матча" onclick="return show_score(this,1);">счет</span>
+								</span>
+								<span class="bet-percentage bet2">(3.20)</span>
+							</span>
+							<span>
+								<img class="flag" src="https://game-tournaments.com/media/flags/3.svg" width="16" height="16">
+								<span rel="90638" style="vertical-align: middle;" class="teamname c2">
+									<b>BB</b>
+								</span>
+							</span>
+						</a>
+					</td>
+					<td class="mtime" style="position:relative; width: 95px;">
+						<span class="lives">
+							<i class="fa fa-youtube-play livevid"></i>
+						</span>
+						<span class="live-in">
+							<span class="sct" data-format="%j% %m%%y%, %h%:%i%" data-time="2025-04-08 00:08:00">08 апреля, 03:08</span>
+						</span>
+					</td>
+					<td class="tournament" style="width: 40px;">
+						<a class="ta odtip" href="/dota-2/esl-one-raleigh-2025/group-stage" title="" data-original-title="ESL One Raleigh 2025">
+							<span class="tournament-icon">
+								<picture>
+									<source srcset="https://game-tournaments.com/media/event/_30/e9493.webp, /media/event/_60/e9493.webp 2x" type="image/webp">
+									<source srcset="https://game-tournaments.com/media/event/_30/e9493.png, /media/event/_60/e9493.png 2x">
+									<img src="https://game-tournaments.com/media/event/_30/e9493.png" loading="lazy" alt="ESL One Raleigh 2025" style="height: 21px;max-width: 21px;object-fit: contain;aspect-ratio: 3/2;">
+								</picture>
+							</span>
+						</a>
+					</td>
+				</tr>
+				<tr rel="600533">
+					<td style="position:relative"></td>
+					<td>
+						<a href="/dota-2/esl-one-raleigh-2025/group-stage/tundra-vs-falcons-600533" title="Матч Tundra против FLCN" class="mlink">
+							<span>
+								<span rel="74703" style="vertical-align: middle;" class="teamname c1">
+									<b>Tundra</b>
+								</span>
+								<img class="flag" src="https://game-tournaments.com/media/flags/96.svg" width="16" height="16">
+							</span>
+							<span>
+								<span class="bet-percentage bet1">(3.40)</span>
+								<span class="vs">
+									<span class="mbutton tresult" data-mid="600533" data-txt="счет" data-score="1 : 1" data-time="" title="Показать счет матча" onclick="return show_score(this,1);">счет</span>
+								</span>
+								<span class="bet-percentage bet2">(3.40)</span>
+							</span>
+							<span>
+								<img class="flag" src="https://game-tournaments.com/media/flags/115.svg" width="16" height="16">
+								<span rel="97509" style="vertical-align: middle;" class="teamname c2">
+									<b>FLCN</b>
+								</span>
+							</span>
+						</a>
+					</td>
+					<td class="mtime" style="position:relative; width: 95px;">
+						<span class="lives">
+							<i class="fa fa-youtube-play livevid"></i>
+						</span>
+						<span class="live-in">
+							<span class="sct" data-format="%j% %m%%y%, %h%:%i%" data-time="2025-04-07 21:33:00">08 апреля, 00:33</span>
+						</span>
+					</td>
+					<td class="tournament" style="width: 40px;">
+						<a class="ta odtip" href="/dota-2/esl-one-raleigh-2025/group-stage" title="" data-original-title="ESL One Raleigh 2025">
+							<span class="tournament-icon">
+								<picture>
+									<source srcset="https://game-tournaments.com/media/event/_30/e9493.webp, /media/event/_60/e9493.webp 2x" type="image/webp">
+									<source srcset="https://game-tournaments.com/media/event/_30/e9493.png, /media/event/_60/e9493.png 2x">
+									<img src="https://game-tournaments.com/media/event/_30/e9493.png" loading="lazy" alt="ESL One Raleigh 2025" style="height: 21px;max-width: 21px;object-fit: contain;aspect-ratio: 3/2;">
+								</picture>
+							</span>
+						</a>
+					</td>
+				</tr>
+				<tr rel="591926">
+					<td style="position:relative"></td>
+					<td>
+						<a href="/dota-2/fissure-universe-episode-4/playoff/falcons-vs-tidebound-591926" title="Матч FLCN против Tb" class="mlink">
+							<span>
+								<span rel="97509" style="vertical-align: middle;" class="teamname c1">
+									<b>FLCN</b>
+								</span>
+								<img class="flag" src="https://game-tournaments.com/media/flags/115.svg" width="16" height="16">
+							</span>
+							<span>
+								<span class="bet-percentage bet1">(0.00)</span>
+								<span class="vs">
+									<span class="mbutton tresult" data-mid="591926" data-txt="счет" data-score="0 : 2" data-time="" title="Показать счет матча" onclick="return show_score(this,1);">счет</span>
+								</span>
+								<span class="bet-percentage bet2">(2.15)</span>
+							</span>
+							<span>
+								<img class="flag" src="https://game-tournaments.com/media/flags/4.svg" width="16" height="16">
+								<span rel="101587" style="vertical-align: middle;" class="teamname c2">
+									<b>Tb</b>
+								</span>
+							</span>
+						</a>
+					</td>
+					<td class="mtime" style="position:relative; width: 95px;">
+						<span class="lives"></span>
+						<span class="live-in">
+							<span class="sct" data-format="%j% %m%%y%, %h%:%i%" data-time="2025-03-29 19:54:00">29 марта, 22:54</span>
+						</span>
+					</td>
+					<td class="tournament" style="width: 40px;">
+						<a class="ta odtip" href="/dota-2/fissure-universe-episode-4/playoff" title="" data-original-title="FISSURE Universe Ep 4">
+							<span class="tournament-icon">
+								<picture>
+									<source srcset="https://game-tournaments.com/media/event/_30/e9706.webp, /media/event/_60/e9706.webp 2x" type="image/webp">
+									<source srcset="https://game-tournaments.com/media/event/_30/e9706.png, /media/event/_60/e9706.png 2x">
+									<img src="https://game-tournaments.com/media/event/_30/e9706.png" loading="lazy" alt="FISSURE Universe Ep 4" style="height: 21px;max-width: 21px;object-fit: contain;aspect-ratio: 3/2;">
+								</picture>
+							</span>
+						</a>
+					</td>
+				</tr>
+				<tr rel="591924">
+					<td style="position:relative"></td>
+					<td>
+						<a href="/dota-2/fissure-universe-episode-4/playoff/falcons-vs-spirit-591924" title="Матч FLCN против TSpirit" class="mlink">
+							<span>
+								<span rel="97509" style="vertical-align: middle;" class="teamname c1">
+									<b>FLCN</b>
+								</span>
+								<img class="flag" src="https://game-tournaments.com/media/flags/115.svg" width="16" height="16">
+							</span>
+							<span>
+								<span class="bet-percentage bet1">(0.00)</span>
+								<span class="vs">
+									<span class="mbutton tresult" data-mid="591924" data-txt="счет" data-score="2 : 1" data-time="" title="Показать счет матча" onclick="return show_score(this,1);">счет</span>
+								</span>
+								<span class="bet-percentage bet2">(1.50)</span>
+							</span>
+							<span>
+								<img class="flag" src="https://game-tournaments.com/media/flags/37.svg" width="16" height="16">
+								<span rel="6224" style="vertical-align: middle;" class="teamname c2">
+									<b>TSpirit</b>
+								</span>
+							</span>
+						</a>
+					</td>
+					<td class="mtime" style="position:relative; width: 95px;">
+						<span class="lives">
+							<i class="fa fa-youtube-play livevid"></i>
+						</span>
+						<span class="live-in">
+							<span class="sct" data-format="%j% %m%%y%, %h%:%i%" data-time="2025-03-29 12:30:00">29 марта, 15:30</span>
+						</span>
+					</td>
+					<td class="tournament" style="width: 40px;">
+						<a class="ta odtip" href="/dota-2/fissure-universe-episode-4/playoff" title="" data-original-title="FISSURE Universe Ep 4">
+							<span class="tournament-icon">
+								<picture>
+									<source srcset="https://game-tournaments.com/media/event/_30/e9706.webp, /media/event/_60/e9706.webp 2x" type="image/webp">
+									<source srcset="https://game-tournaments.com/media/event/_30/e9706.png, /media/event/_60/e9706.png 2x">
+									<img src="https://game-tournaments.com/media/event/_30/e9706.png" loading="lazy" alt="FISSURE Universe Ep 4" style="height: 21px;max-width: 21px;object-fit: contain;aspect-ratio: 3/2;">
+								</picture>
+							</span>
+						</a>
+					</td>
+				</tr>
+				<tr rel="591920">
+					<td style="position:relative"></td>
+					<td>
+						<a href="/dota-2/fissure-universe-episode-4/playoff/falcons-vs-gladiators-591920" title="Матч FLCN против GG" class="mlink">
+							<span>
+								<span rel="97509" style="vertical-align: middle;" class="teamname c1">
+									<b>FLCN</b>
+								</span>
+								<img class="flag" src="https://game-tournaments.com/media/flags/115.svg" width="16" height="16">
+							</span>
+							<span>
+								<span class="bet-percentage bet1">(0.00)</span>
+								<span class="vs">
+									<span class="mbutton tresult" data-mid="591920" data-txt="счет" data-score="0 : 2" data-time="" title="Показать счет матча" onclick="return show_score(this,1);">счет</span>
+								</span>
+								<span class="bet-percentage bet2">(2.35)</span>
+							</span>
+							<span>
+								<img class="flag" src="https://game-tournaments.com/media/flags/25.svg" width="16" height="16">
+								<span rel="89541" style="vertical-align: middle;" class="teamname c2">
+									<b>GG</b>
+								</span>
+							</span>
+						</a>
+					</td>
+					<td class="mtime" style="position:relative; width: 95px;">
+						<span class="lives">
+							<i class="fa fa-youtube-play livevid"></i>
+						</span>
+						<span class="live-in">
+							<span class="sct" data-format="%j% %m%%y%, %h%:%i%" data-time="2025-03-28 19:38:00">28 марта, 22:38</span>
+						</span>
+					</td>
+					<td class="tournament" style="width: 40px;">
+						<a class="ta odtip" href="/dota-2/fissure-universe-episode-4/playoff" title="" data-original-title="FISSURE Universe Ep 4">
+							<span class="tournament-icon">
+								<picture>
+									<source srcset="https://game-tournaments.com/media/event/_30/e9706.webp, /media/event/_60/e9706.webp 2x" type="image/webp">
+									<source srcset="https://game-tournaments.com/media/event/_30/e9706.png, /media/event/_60/e9706.png 2x">
+									<img src="https://game-tournaments.com/media/event/_30/e9706.png" loading="lazy" alt="FISSURE Universe Ep 4" style="height: 21px;max-width: 21px;object-fit: contain;aspect-ratio: 3/2;">
+								</picture>
+							</span>
+						</a>
+					</td>
+				</tr>
+				<tr rel="591917">
+					<td style="position:relative"></td>
+					<td>
+						<a href="/dota-2/fissure-universe-episode-4/playoff/tundra-vs-falcons-591917" title="Матч Tundra против FLCN" class="mlink">
+							<span>
+								<span rel="74703" style="vertical-align: middle;" class="teamname c1">
+									<b>Tundra</b>
+								</span>
+								<img class="flag" src="https://game-tournaments.com/media/flags/96.svg" width="16" height="16">
+							</span>
+							<span>
+								<span class="bet-percentage bet1">(0.00)</span>
+								<span class="vs">
+									<span class="mbutton tresult" data-mid="591917" data-txt="счет" data-score="1 : 2" data-time="" title="Показать счет матча" onclick="return show_score(this,1);">счет</span>
+								</span>
+								<span class="bet-percentage bet2">(2.15)</span>
+							</span>
+							<span>
+								<img class="flag" src="https://game-tournaments.com/media/flags/115.svg" width="16" height="16">
+								<span rel="97509" style="vertical-align: middle;" class="teamname c2">
+									<b>FLCN</b>
+								</span>
+							</span>
+						</a>
+					</td>
+					<td class="mtime" style="position:relative; width: 95px;">
+						<span class="lives">
+							<i class="fa fa-youtube-play livevid"></i>
+						</span>
+						<span class="live-in">
+							<span class="sct" data-format="%j% %m%%y%, %h%:%i%" data-time="2025-03-27 16:08:00">27 марта, 19:08</span>
+						</span>
+					</td>
+					<td class="tournament" style="width: 40px;">
+						<a class="ta odtip" href="/dota-2/fissure-universe-episode-4/playoff" title="" data-original-title="FISSURE Universe Ep 4">
+							<span class="tournament-icon">
+								<picture>
+									<source srcset="https://game-tournaments.com/media/event/_30/e9706.webp, /media/event/_60/e9706.webp 2x" type="image/webp">
+									<source srcset="https://game-tournaments.com/media/event/_30/e9706.png, /media/event/_60/e9706.png 2x">
+									<img src="https://game-tournaments.com/media/event/_30/e9706.png" loading="lazy" alt="FISSURE Universe Ep 4" style="height: 21px;max-width: 21px;object-fit: contain;aspect-ratio: 3/2;">
+								</picture>
+							</span>
+						</a>
+					</td>
+				</tr>
+				<tr rel="598614">
+					<td style="position:relative"></td>
+					<td>
+						<a href="/dota-2/fissure-universe-episode-4/group-stage/boom-vs-falcons-598614" title="Матч BOOM против FLCN" class="mlink">
+							<span>
+								<span rel="13740" style="vertical-align: middle;" class="teamname c1">
+									<b>BOOM</b>
+								</span>
+								<img class="flag" src="https://game-tournaments.com/media/flags/29.svg" width="16" height="16">
+							</span>
+							<span>
+								<span class="bet-percentage bet1">(5.30)</span>
+								<span class="vs">
+									<span class="mbutton tresult" data-mid="598614" data-txt="счет" data-score="1 : 2" data-time="" title="Показать счет матча" onclick="return show_score(this,1);">счет</span>
+								</span>
+								<span class="bet-percentage bet2">(1.15)</span>
+							</span>
+							<span>
+								<img class="flag" src="https://game-tournaments.com/media/flags/115.svg" width="16" height="16">
+								<span rel="97509" style="vertical-align: middle;" class="teamname c2">
+									<b>FLCN</b>
+								</span>
+							</span>
+						</a>
+					</td>
+					<td class="mtime" style="position:relative; width: 95px;">
+						<span class="lives">
+							<i class="fa fa-youtube-play livevid"></i>
+						</span>
+						<span class="live-in">
+							<span class="sct" data-format="%j% %m%%y%, %h%:%i%" data-time="2025-03-26 10:00:00">26 марта, 13:00</span>
+						</span>
+					</td>
+					<td class="tournament" style="width: 40px;">
+						<a class="ta odtip" href="/dota-2/fissure-universe-episode-4/group-stage" title="" data-original-title="FISSURE Universe Ep 4">
+							<span class="tournament-icon">
+								<picture>
+									<source srcset="https://game-tournaments.com/media/event/_30/e9706.webp, /media/event/_60/e9706.webp 2x" type="image/webp">
+									<source srcset="https://game-tournaments.com/media/event/_30/e9706.png, /media/event/_60/e9706.png 2x">
+									<img src="https://game-tournaments.com/media/event/_30/e9706.png" loading="lazy" alt="FISSURE Universe Ep 4" style="height: 21px;max-width: 21px;object-fit: contain;aspect-ratio: 3/2;">
+								</picture>
+							</span>
+						</a>
+					</td>
+				</tr>
+				<tr rel="598607">
+					<td style="position:relative"></td>
+					<td>
+						<a href="/dota-2/fissure-universe-episode-4/group-stage/falcons-vs-tidebound-598607" title="Матч FLCN против Tb" class="mlink">
+							<span>
+								<span rel="97509" style="vertical-align: middle;" class="teamname c1">
+									<b>FLCN</b>
+								</span>
+								<img class="flag" src="https://game-tournaments.com/media/flags/115.svg" width="16" height="16">
+							</span>
+							<span>
+								<span class="bet-percentage bet1">(1.42)</span>
+								<span class="vs">
+									<span class="mbutton tresult" data-mid="598607" data-txt="счет" data-score="1 : 2" data-time="" title="Показать счет матча" onclick="return show_score(this,1);">счет</span>
+								</span>
+								<span class="bet-percentage bet2">(2.90)</span>
+							</span>
+							<span>
+								<img class="flag" src="https://game-tournaments.com/media/flags/4.svg" width="16" height="16">
+								<span rel="101587" style="vertical-align: middle;" class="teamname c2">
+									<b>Tb</b>
+								</span>
+							</span>
+						</a>
+					</td>
+					<td class="mtime" style="position:relative; width: 95px;">
+						<span class="lives">
+							<i class="fa fa-youtube-play livevid"></i>
+						</span>
+						<span class="live-in">
+							<span class="sct" data-format="%j% %m%%y%, %h%:%i%" data-time="2025-03-25 13:30:00">25 марта, 16:30</span>
+						</span>
+					</td>
+					<td class="tournament" style="width: 40px;">
+						<a class="ta odtip" href="/dota-2/fissure-universe-episode-4/group-stage" title="" data-original-title="FISSURE Universe Ep 4">
+							<span class="tournament-icon">
+								<picture>
+									<source srcset="https://game-tournaments.com/media/event/_30/e9706.webp, /media/event/_60/e9706.webp 2x" type="image/webp">
+									<source srcset="https://game-tournaments.com/media/event/_30/e9706.png, /media/event/_60/e9706.png 2x">
+									<img src="https://game-tournaments.com/media/event/_30/e9706.png" loading="lazy" alt="FISSURE Universe Ep 4" style="height: 21px;max-width: 21px;object-fit: contain;aspect-ratio: 3/2;">
+								</picture>
+							</span>
+						</a>
+					</td>
+				</tr>
+				<tr rel="598603">
+					<td style="position:relative"></td>
+					<td>
+						<a href="/dota-2/fissure-universe-episode-4/group-stage/falcons-vs-talon-esports-598603" title="Матч FLCN против TALON" class="mlink">
+							<span>
+								<span rel="97509" style="vertical-align: middle;" class="teamname c1">
+									<b>FLCN</b>
+								</span>
+								<img class="flag" src="https://game-tournaments.com/media/flags/115.svg" width="16" height="16">
+							</span>
+							<span>
+								<span class="bet-percentage bet1">(1.38)</span>
+								<span class="vs">
+									<span class="mbutton tresult" data-mid="598603" data-txt="счет" data-score="2 : 0" data-time="" title="Показать счет матча" onclick="return show_score(this,1);">счет</span>
+								</span>
+								<span class="bet-percentage bet2">(3.00)</span>
+							</span>
+							<span>
+								<img class="flag" src="https://game-tournaments.com/media/flags/29.svg" width="16" height="16">
+								<span rel="87966" style="vertical-align: middle;" class="teamname c2">
+									<b>TALON</b>
+								</span>
+							</span>
+						</a>
+					</td>
+					<td class="mtime" style="position:relative; width: 95px;">
+						<span class="lives">
+							<i class="fa fa-youtube-play livevid"></i>
+						</span>
+						<span class="live-in">
+							<span class="sct" data-format="%j% %m%%y%, %h%:%i%" data-time="2025-03-24 16:01:00">24 марта, 19:01</span>
+						</span>
+					</td>
+					<td class="tournament" style="width: 40px;">
+						<a class="ta odtip" href="/dota-2/fissure-universe-episode-4/group-stage" title="" data-original-title="FISSURE Universe Ep 4">
+							<span class="tournament-icon">
+								<picture>
+									<source srcset="https://game-tournaments.com/media/event/_30/e9706.webp, /media/event/_60/e9706.webp 2x" type="image/webp">
+									<source srcset="https://game-tournaments.com/media/event/_30/e9706.png, /media/event/_60/e9706.png 2x">
+									<img src="https://game-tournaments.com/media/event/_30/e9706.png" loading="lazy" alt="FISSURE Universe Ep 4" style="height: 21px;max-width: 21px;object-fit: contain;aspect-ratio: 3/2;">
+								</picture>
+							</span>
+						</a>
+					</td>
+				</tr>
+				<tr rel="598594">
+					<td style="position:relative"></td>
+					<td>
+						<a href="/dota-2/fissure-universe-episode-4/group-stage/falcons-vs-gladiators-598594" title="Матч FLCN против GG" class="mlink">
+							<span>
+								<span rel="97509" style="vertical-align: middle;" class="teamname c1">
+									<b>FLCN</b>
+								</span>
+								<img class="flag" src="https://game-tournaments.com/media/flags/115.svg" width="16" height="16">
+							</span>
+							<span>
+								<span class="bet-percentage bet1">(1.48)</span>
+								<span class="vs">
+									<span class="mbutton tresult" data-mid="598594" data-txt="счет" data-score="0 : 2" data-time="" title="Показать счет матча" onclick="return show_score(this,1);">счет</span>
+								</span>
+								<span class="bet-percentage bet2">(2.60)</span>
+							</span>
+							<span>
+								<img class="flag" src="https://game-tournaments.com/media/flags/25.svg" width="16" height="16">
+								<span rel="89541" style="vertical-align: middle;" class="teamname c2">
+									<b>GG</b>
+								</span>
+							</span>
+						</a>
+					</td>
+					<td class="mtime" style="position:relative; width: 95px;">
+						<span class="lives">
+							<i class="fa fa-youtube-play livevid"></i>
+						</span>
+						<span class="live-in">
+							<span class="sct" data-format="%j% %m%%y%, %h%:%i%" data-time="2025-03-23 16:00:00">23 марта, 19:00</span>
+						</span>
+					</td>
+					<td class="tournament" style="width: 40px;">
+						<a class="ta odtip" href="/dota-2/fissure-universe-episode-4/group-stage" title="" data-original-title="FISSURE Universe Ep 4">
+							<span class="tournament-icon">
+								<picture>
+									<source srcset="https://game-tournaments.com/media/event/_30/e9706.webp, /media/event/_60/e9706.webp 2x" type="image/webp">
+									<source srcset="https://game-tournaments.com/media/event/_30/e9706.png, /media/event/_60/e9706.png 2x">
+									<img src="https://game-tournaments.com/media/event/_30/e9706.png" loading="lazy" alt="FISSURE Universe Ep 4" style="height: 21px;max-width: 21px;object-fit: contain;aspect-ratio: 3/2;">
+								</picture>
+							</span>
+						</a>
+					</td>
+				</tr>
+				<tr rel="598587">
+					<td style="position:relative"></td>
+					<td>
+						<a href="/dota-2/fissure-universe-episode-4/group-stage/falcons-vs-1win-598587" title="Матч FLCN против 1w" class="mlink">
+							<span>
+								<span rel="97509" style="vertical-align: middle;" class="teamname c1">
+									<b>FLCN</b>
+								</span>
+								<img class="flag" src="https://game-tournaments.com/media/flags/115.svg" width="16" height="16">
+							</span>
+							<span>
+								<span class="bet-percentage bet1">(1.05)</span>
+								<span class="vs">
+									<span class="mbutton tresult" data-mid="598587" data-txt="счет" data-score="2 : 0" data-time="" title="Показать счет матча" onclick="return show_score(this,1);">счет</span>
+								</span>
+								<span class="bet-percentage bet2">(10.00)</span>
+							</span>
+							<span>
+								<img class="flag" src="https://game-tournaments.com/media/flags/3.svg" width="16" height="16">
+								<span rel="98607" style="vertical-align: middle;" class="teamname c2">
+									<b>1w</b>
+								</span>
+							</span>
+						</a>
+					</td>
+					<td class="mtime" style="position:relative; width: 95px;">
+						<span class="lives">
+							<i class="fa fa-youtube-play livevid"></i>
+						</span>
+						<span class="live-in">
+							<span class="sct" data-format="%j% %m%%y%, %h%:%i%" data-time="2025-03-22 16:08:00">22 марта, 19:08</span>
+						</span>
+					</td>
+					<td class="tournament" style="width: 40px;">
+						<a class="ta odtip" href="/dota-2/fissure-universe-episode-4/group-stage" title="" data-original-title="FISSURE Universe Ep 4">
+							<span class="tournament-icon">
+								<picture>
+									<source srcset="https://game-tournaments.com/media/event/_30/e9706.webp, /media/event/_60/e9706.webp 2x" type="image/webp">
+									<source srcset="https://game-tournaments.com/media/event/_30/e9706.png, /media/event/_60/e9706.png 2x">
+									<img src="https://game-tournaments.com/media/event/_30/e9706.png" loading="lazy" alt="FISSURE Universe Ep 4" style="height: 21px;max-width: 21px;object-fit: contain;aspect-ratio: 3/2;">
+								</picture>
+							</span>
+						</a>
+					</td>
+				</tr>
+				<tr rel="577566">
+					<td style="position:relative"></td>
+					<td>
+						<a href="/dota-2/pgl-wallachia-season-3/playoff/falcons-vs-tundra-577566" title="Матч FLCN против Tundra" class="mlink">
+							<span>
+								<span rel="97509" style="vertical-align: middle;" class="teamname c1">
+									<b>FLCN</b>
+								</span>
+								<img class="flag" src="https://game-tournaments.com/media/flags/115.svg" width="16" height="16">
+							</span>
+							<span>
+								<span class="bet-percentage bet1">(1.98)</span>
+								<span class="vs">
+									<span class="mbutton tresult" data-mid="577566" data-txt="счет" data-score="0 : 2" data-time="" title="Показать счет матча" onclick="return show_score(this,1);">счет</span>
+								</span>
+								<span class="bet-percentage bet2">(1.82)</span>
+							</span>
+							<span>
+								<img class="flag" src="https://game-tournaments.com/media/flags/96.svg" width="16" height="16">
+								<span rel="74703" style="vertical-align: middle;" class="teamname c2">
+									<b>Tundra</b>
+								</span>
+							</span>
+						</a>
+					</td>
+					<td class="mtime" style="position:relative; width: 95px;">
+						<span class="lives">
+							<i class="fa fa-youtube-play livevid"></i>
+						</span>
+						<span class="live-in">
+							<span class="sct" data-format="%j% %m%%y%, %h%:%i%" data-time="2025-03-16 09:02:00">16 марта, 12:02</span>
+						</span>
+					</td>
+					<td class="tournament" style="width: 40px;">
+						<a class="ta odtip" href="/dota-2/pgl-wallachia-season-3/playoff" title="" data-original-title="PGL Wallachia S3">
+							<span class="tournament-icon">
+								<picture>
+									<source srcset="https://game-tournaments.com/media/event/_30/e8869.webp, /media/event/_60/e8869.webp 2x" type="image/webp">
+									<source srcset="https://game-tournaments.com/media/event/_30/e8869.png, /media/event/_60/e8869.png 2x">
+									<img src="https://game-tournaments.com/media/event/_30/e8869.png" loading="lazy" alt="PGL Wallachia S3" style="height: 21px;max-width: 21px;object-fit: contain;aspect-ratio: 3/2;">
+								</picture>
+							</span>
+						</a>
+					</td>
+				</tr>
+				<tr rel="577560">
+					<td style="position:relative"></td>
+					<td>
+						<a href="/dota-2/pgl-wallachia-season-3/playoff/liquid-vs-falcons-577560" title="Матч Liquid против FLCN" class="mlink">
+							<span>
+								<span rel="14" style="vertical-align: middle;" class="teamname c1">
+									<b>Liquid</b>
+								</span>
+								<img class="flag" src="https://game-tournaments.com/media/flags/17.svg" width="16" height="16">
+							</span>
+							<span>
+								<span class="bet-percentage bet1">(2.50)</span>
+								<span class="vs">
+									<span class="mbutton tresult" data-mid="577560" data-txt="счет" data-score="2 : 0" data-time="" title="Показать счет матча" onclick="return show_score(this,1);">счет</span>
+								</span>
+								<span class="bet-percentage bet2">(1.52)</span>
+							</span>
+							<span>
+								<img class="flag" src="https://game-tournaments.com/media/flags/115.svg" width="16" height="16">
+								<span rel="97509" style="vertical-align: middle;" class="teamname c2">
+									<b>FLCN</b>
+								</span>
+							</span>
+						</a>
+					</td>
+					<td class="mtime" style="position:relative; width: 95px;">
+						<span class="lives">
+							<i class="fa fa-youtube-play livevid"></i>
+						</span>
+						<span class="live-in">
+							<span class="sct" data-format="%j% %m%%y%, %h%:%i%" data-time="2025-03-15 14:00:00">15 марта, 17:00</span>
+						</span>
+					</td>
+					<td class="tournament" style="width: 40px;">
+						<a class="ta odtip" href="/dota-2/pgl-wallachia-season-3/playoff" title="" data-original-title="PGL Wallachia S3">
+							<span class="tournament-icon">
+								<picture>
+									<source srcset="https://game-tournaments.com/media/event/_30/e8869.webp, /media/event/_60/e8869.webp 2x" type="image/webp">
+									<source srcset="https://game-tournaments.com/media/event/_30/e8869.png, /media/event/_60/e8869.png 2x">
+									<img src="https://game-tournaments.com/media/event/_30/e8869.png" loading="lazy" alt="PGL Wallachia S3" style="height: 21px;max-width: 21px;object-fit: contain;aspect-ratio: 3/2;">
+								</picture>
+							</span>
+						</a>
+					</td>
+				</tr>
+				<tr rel="577559">
+					<td style="position:relative"></td>
+					<td>
+						<a href="/dota-2/pgl-wallachia-season-3/playoff/falcons-vs-tundra-577559" title="Матч FLCN против Tundra" class="mlink">
+							<span>
+								<span rel="97509" style="vertical-align: middle;" class="teamname c1">
+									<b>FLCN</b>
+								</span>
+								<img class="flag" src="https://game-tournaments.com/media/flags/115.svg" width="16" height="16">
+							</span>
+							<span>
+								<span class="bet-percentage bet1">(2.05)</span>
+								<span class="vs">
+									<span class="mbutton tresult" data-mid="577559" data-txt="счет" data-score="2 : 1" data-time="" title="Показать счет матча" onclick="return show_score(this,1);">счет</span>
+								</span>
+								<span class="bet-percentage bet2">(1.75)</span>
+							</span>
+							<span>
+								<img class="flag" src="https://game-tournaments.com/media/flags/96.svg" width="16" height="16">
+								<span rel="74703" style="vertical-align: middle;" class="teamname c2">
+									<b>Tundra</b>
+								</span>
+							</span>
+						</a>
+					</td>
+					<td class="mtime" style="position:relative; width: 95px;">
+						<span class="lives">
+							<i class="fa fa-youtube-play livevid"></i>
+						</span>
+						<span class="live-in">
+							<span class="sct" data-format="%j% %m%%y%, %h%:%i%" data-time="2025-03-14 17:52:00">14 марта, 20:52</span>
+						</span>
+					</td>
+					<td class="tournament" style="width: 40px;">
+						<a class="ta odtip" href="/dota-2/pgl-wallachia-season-3/playoff" title="" data-original-title="PGL Wallachia S3">
+							<span class="tournament-icon">
+								<picture>
+									<source srcset="https://game-tournaments.com/media/event/_30/e8869.webp, /media/event/_60/e8869.webp 2x" type="image/webp">
+									<source srcset="https://game-tournaments.com/media/event/_30/e8869.png, /media/event/_60/e8869.png 2x">
+									<img src="https://game-tournaments.com/media/event/_30/e8869.png" loading="lazy" alt="PGL Wallachia S3" style="height: 21px;max-width: 21px;object-fit: contain;aspect-ratio: 3/2;">
+								</picture>
+							</span>
+						</a>
+					</td>
+				</tr>
+				<tr rel="577556">
+					<td style="position:relative"></td>
+					<td>
+						<a href="/dota-2/pgl-wallachia-season-3/playoff/spirit-vs-falcons-577556" title="Матч TSpirit против FLCN" class="mlink">
+							<span>
+								<span rel="6224" style="vertical-align: middle;" class="teamname c1">
+									<b>TSpirit</b>
+								</span>
+								<img class="flag" src="https://game-tournaments.com/media/flags/37.svg" width="16" height="16">
+							</span>
+							<span>
+								<span class="bet-percentage bet1">(1.30)</span>
+								<span class="vs">
+									<span class="mbutton tresult" data-mid="577556" data-txt="счет" data-score="0 : 2" data-time="" title="Показать счет матча" onclick="return show_score(this,1);">счет</span>
+								</span>
+								<span class="bet-percentage bet2">(3.50)</span>
+							</span>
+							<span>
+								<img class="flag" src="https://game-tournaments.com/media/flags/115.svg" width="16" height="16">
+								<span rel="97509" style="vertical-align: middle;" class="teamname c2">
+									<b>FLCN</b>
+								</span>
+							</span>
+						</a>
+					</td>
+					<td class="mtime" style="position:relative; width: 95px;">
+						<span class="lives">
+							<i class="fa fa-youtube-play livevid"></i>
+						</span>
+						<span class="live-in">
+							<span class="sct" data-format="%j% %m%%y%, %h%:%i%" data-time="2025-03-13 14:09:00">13 марта, 17:09</span>
+						</span>
+					</td>
+					<td class="tournament" style="width: 40px;">
+						<a class="ta odtip" href="/dota-2/pgl-wallachia-season-3/playoff" title="" data-original-title="PGL Wallachia S3">
+							<span class="tournament-icon">
+								<picture>
+									<source srcset="https://game-tournaments.com/media/event/_30/e8869.webp, /media/event/_60/e8869.webp 2x" type="image/webp">
+									<source srcset="https://game-tournaments.com/media/event/_30/e8869.png, /media/event/_60/e8869.png 2x">
+									<img src="https://game-tournaments.com/media/event/_30/e8869.png" loading="lazy" alt="PGL Wallachia S3" style="height: 21px;max-width: 21px;object-fit: contain;aspect-ratio: 3/2;">
+								</picture>
+							</span>
+						</a>
+					</td>
+				</tr>
+				<tr rel="596573">
+					<td style="position:relative"></td>
+					<td>
+						<a href="/dota-2/pgl-wallachia-season-3/group-stage/falcons-vs-heroic-596573" title="Матч FLCN против Heroic" class="mlink">
+							<span>
+								<span rel="97509" style="vertical-align: middle;" class="teamname c1">
+									<b>FLCN</b>
+								</span>
+								<img class="flag" src="https://game-tournaments.com/media/flags/115.svg" width="16" height="16">
+							</span>
+							<span>
+								<span class="bet-percentage bet1">(1.30)</span>
+								<span class="vs">
+									<span class="mbutton tresult" data-mid="596573" data-txt="счет" data-score="2 : 0" data-time="" title="Показать счет матча" onclick="return show_score(this,1);">счет</span>
+								</span>
+								<span class="bet-percentage bet2">(3.50)</span>
+							</span>
+							<span>
+								<img class="flag" src="https://game-tournaments.com/media/flags/6.svg" width="16" height="16">
+								<span rel="97472" style="vertical-align: middle;" class="teamname c2">
+									<b>Heroic</b>
+								</span>
+							</span>
+						</a>
+					</td>
+					<td class="mtime" style="position:relative; width: 95px;">
+						<span class="lives">
+							<i class="fa fa-youtube-play livevid"></i>
+						</span>
+						<span class="live-in">
+							<span class="sct" data-format="%j% %m%%y%, %h%:%i%" data-time="2025-03-12 10:32:00">12 марта, 13:32</span>
+						</span>
+					</td>
+					<td class="tournament" style="width: 40px;">
+						<a class="ta odtip" href="/dota-2/pgl-wallachia-season-3/group-stage" title="" data-original-title="PGL Wallachia S3">
+							<span class="tournament-icon">
+								<picture>
+									<source srcset="https://game-tournaments.com/media/event/_30/e8869.webp, /media/event/_60/e8869.webp 2x" type="image/webp">
+									<source srcset="https://game-tournaments.com/media/event/_30/e8869.png, /media/event/_60/e8869.png 2x">
+									<img src="https://game-tournaments.com/media/event/_30/e8869.png" loading="lazy" alt="PGL Wallachia S3" style="height: 21px;max-width: 21px;object-fit: contain;aspect-ratio: 3/2;">
+								</picture>
+							</span>
+						</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<nav class="pull-right">
+			<ul class="pagination">
+				<li class="active">
+					<a href="javascript:;" onclick="match_pages('past',1)">1</a>
+				</li>
+				<li>
+					<a href="javascript:;" onclick="match_pages('past',2)">2</a>
+				</li>
+				<li>
+					<a href="javascript:;" onclick="match_pages('past',3)">3</a>
+				</li>
+				<li>
+					<a href="javascript:;" onclick="match_pages('past',4)">
+						<span aria-hidden="true">»</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</div>
+
+
+								<div class="box clearfix">
+	<h2 class="block_head">
+		<i class="fa fa-fw fa-trophy"></i>
+		Достижения FLCN</h2>
+	<div class="table-responsive" id="block_team_winners">
+		<table class="table table-condensed table-hover vam">
+			<thead>
+				<tr>
+					<th width="">Дата</th>
+					<th width="">Турнир</th>
+					<th width="70">Место</th>
+					<th width="90" class="text-right">Приз</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="sca" data-time="1743292800">1н назад</td>
+					<td>
+						<a href="/dota-2/fissure-universe-episode-4">FISSURE Universe Ep 4</a>
+					</td>
+					<td>4 место</td>
+					<td class="text-right">
+						<i class="fa fa-fw fa-usd"></i>30,000</td>
+				</tr>
+				<tr>
+					<td class="sca" data-time="1742083200">3н назад</td>
+					<td>
+						<a href="/dota-2/pgl-wallachia-season-3">PGL Wallachia S3</a>
+					</td>
+					<td>3 место</td>
+					<td class="text-right">
+						<i class="fa fa-fw fa-usd"></i>120,000</td>
+				</tr>
+				<tr>
+					<td class="sca" data-time="1741046400">1мес. назад</td>
+					<td>
+						<a href="/dota-2/dreamleague-season-25">DreamLeague S25</a>
+					</td>
+					<td>5 место</td>
+					<td class="text-right">
+						<i class="fa fa-fw fa-usd"></i>60,000</td>
+				</tr>
+				<tr>
+					<td class="sca" data-time="1739059200">2мес. назад</td>
+					<td>
+						<a href="/dota-2/blast-slam-2">BLAST Slam #2</a>
+					</td>
+					<td>3 место</td>
+					<td class="text-right">
+						<i class="fa fa-fw fa-usd"></i>80,000</td>
+				</tr>
+				<tr>
+					<td class="sca" data-time="1738454400">2мес. назад</td>
+					<td>
+						<a href="/dota-2/fissure-playground-belgrade-2025">FPG Belgrade 2025</a>
+					</td>
+					<td>2 место</td>
+					<td class="text-right">
+						<i class="fa fa-fw fa-usd"></i>170,000</td>
+				</tr>
+				<tr>
+					<td class="sca" data-time="1734220800">3мес. назад</td>
+					<td>
+						<a href="/dota-2/esl-one-bangkok-2024">ESL One Bangkok 2024</a>
+					</td>
+					<td>5 место</td>
+					<td class="text-right">
+						<i class="fa fa-fw fa-usd"></i>57,500</td>
+				</tr>
+				<tr>
+					<td class="sca" data-time="1733011200">4мес. назад</td>
+					<td>
+						<a href="/dota-2/blast-slam-1">BLAST Slam #1</a>
+					</td>
+					<td>7 место</td>
+					<td class="text-right">
+						<i class="fa fa-fw fa-usd"></i>40,000</td>
+				</tr>
+				<tr>
+					<td class="sca" data-time="1731196800">5мес. назад</td>
+					<td>
+						<a href="/dota-2/dreamleague-season-24">DreamLeague S24</a>
+					</td>
+					<td>1 место</td>
+					<td class="text-right">
+						<i class="fa fa-fw fa-usd"></i>300,000</td>
+				</tr>
+				<tr>
+					<td class="sca" data-time="1729900800">5мес. назад</td>
+					<td>
+						<a href="/dota-2/betboom-dacha-belgrade-2024">BBD Belgrade 2024</a>
+					</td>
+					<td>1 место</td>
+					<td class="text-right">
+						<i class="fa fa-fw fa-usd"></i>400,000</td>
+				</tr>
+				<tr>
+					<td class="sca" data-time="1728777600">6мес. назад</td>
+					<td>
+						<a href="/dota-2/pgl-wallachia-season-2">PGL Wallachia S2</a>
+					</td>
+					<td>2 место</td>
+					<td class="text-right">
+						<i class="fa fa-fw fa-usd"></i>175,000</td>
+				</tr>
+			</tbody>
+		</table>
+		<nav class="pull-right">
+			<ul class="pagination">
+				<li class="active">
+					<a href="javascript:;" onclick="pages('block_team_winners',1)">1</a>
+				</li>
+				<li>
+					<a href="javascript:;" onclick="pages('block_team_winners',2)">2</a>
+				</li>
+				<li>
+					<a href="javascript:;" onclick="pages('block_team_winners',3)">3</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</div>
+
+
+								<div class="well bg-info">
+									* Форма показывает насколько хороши текущие показатели игроков команды (последние 15 игр), относительно их средних показателей (последние 50 игр)
+								</div>
+
+								<div class="box clearfix">
+	<h2>О команде</h2>
+	<div class="text-content">
+		Tundra Esports — британская киберспортивная команда по Dota 2, добившаяся значительных успехов на международной арене. За свою историю, начиная с 2021 года, команда провела около 450 матчей, одержав примерно 260 побед. Пиком карьеры Tundra Esports стала победа на The International 2022, самом престижном турнире по Dota 2, принеся команде внушительный денежный приз в размере около 8,5 миллионов долларов. Команда неоднократно занимала призовые места на крупных турнирах, демонстрируя стабильно высокий уровень игры и входя в число лучших команд мира. За время существования в команде играло более 30 игроков.
+	</div>
+</div>
+
+<style>
+.text-content{
+    padding: 30px;
+}
+</style>
+
+
+							</div>
+							<div class="col-sm-12 col-md-4">
+								<div class="col-right">
+									<div class="box teamplayers">
+	<h2>
+		<i class="fa fa-fw fa-users"></i>
+		Состав FLCN</h2>
+	<table width="100%" class="table-striped table-condensed" id="table-team-players">
+		<tbody>
+			<tr>
+				<td align="center">
+					<a class="tava" href="/dota-2/player/skiter" title="Игрок команды Team Falcons - skiter">
+						<picture>
+							<source srcset="https://game-tournaments.com/media/logo/_60/p3400.webp, https://game-tournaments.com/media/logo/_120/p3400.webp 2x" type="image/webp">
+							<source srcset="https://game-tournaments.com/media/logo/_60/p3400.png, https://game-tournaments.com/media/logo/_120/p3400.png 2x">
+							<img class="teampick" src="https://game-tournaments.com/media/logo/_60/p3400.png" alt="skiter">
+						</picture>
+					</a>
+				</td>
+				<td style="vertical-align:top">
+					<h3>
+						<a style="display: flex; align-items: center;" class="nickh2" href="/dota-2/player/skiter">
+							<span class="sm g">Carry.</span>skiter
+							<img style="width: 20px; height: 20px; margin-left: 5px" src="https://game-tournaments.com/media/flags/42.svg">
+						</a>
+					</h3>
+					<ul>
+						<li>
+							<span class="sca" data-time="1744313400">вчера</span>
+							за
+							<a href="/dota-2/team/falcons">FLCN</a>
+							vs
+							<a href="/dota-2/team/spirit">TSpirit</a>
+						</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td align="center">
+					<a class="tava" href="/dota-2/player/malr1ne" title="Игрок команды Team Falcons - Malr1ne">
+						<picture>
+							<source srcset="https://game-tournaments.com/media/logo/_60/p73481.webp, https://game-tournaments.com/media/logo/_120/p73481.webp 2x" type="image/webp">
+							<source srcset="https://game-tournaments.com/media/logo/_60/p73481.png, https://game-tournaments.com/media/logo/_120/p73481.png 2x">
+							<img class="teampick" src="https://game-tournaments.com/media/logo/_60/p73481.png" alt="Malr1ne">
+						</picture>
+					</a>
+				</td>
+				<td style="vertical-align:top">
+					<h3>
+						<a style="display: flex; align-items: center;" class="nickh2" href="/dota-2/player/malr1ne">
+							<span class="sm g">Mid.</span>Malr1ne
+							<img style="width: 20px; height: 20px; margin-left: 5px" src="https://game-tournaments.com/media/flags/3.svg">
+						</a>
+					</h3>
+					<ul>
+						<li>
+							<span class="sca" data-time="1743278040">1н назад</span>
+							за
+							<a href="/dota-2/team/falcons">FLCN</a>
+							vs
+							<a href="/dota-2/team/tidebound">Tb</a>
+						</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td align="center">
+					<a class="tava" href="/dota-2/player/atf" title="Игрок команды Team Falcons - ATF">
+						<picture>
+							<source srcset="https://game-tournaments.com/media/logo/_60/p68172.webp, https://game-tournaments.com/media/logo/_120/p68172.webp 2x" type="image/webp">
+							<source srcset="https://game-tournaments.com/media/logo/_60/p68172.png, https://game-tournaments.com/media/logo/_120/p68172.png 2x">
+							<img class="teampick" src="https://game-tournaments.com/media/logo/_60/p68172.png" alt="ATF">
+						</picture>
+					</a>
+				</td>
+				<td style="vertical-align:top">
+					<h3>
+						<a style="display: flex; align-items: center;" class="nickh2" href="/dota-2/player/atf">
+							<span class="sm g">Offlane.</span>ATF
+							<img style="width: 20px; height: 20px; margin-left: 5px" src="https://game-tournaments.com/media/flags/48.svg">
+						</a>
+					</h3>
+					<ul>
+						<li>
+							<span class="sca" data-time="1744313400">вчера</span>
+							за
+							<a href="/dota-2/team/falcons">FLCN</a>
+							vs
+							<a href="/dota-2/team/spirit">TSpirit</a>
+						</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td align="center">
+					<a class="tava" href="/dota-2/player/cr1t" title="Игрок команды Team Falcons - Cr1t">
+						<picture>
+							<source srcset="https://game-tournaments.com/media/logo/_60/p57.webp, https://game-tournaments.com/media/logo/_120/p57.webp 2x" type="image/webp">
+							<source srcset="https://game-tournaments.com/media/logo/_60/p57.png, https://game-tournaments.com/media/logo/_120/p57.png 2x">
+							<img class="teampick" src="https://game-tournaments.com/media/logo/_60/p57.png" alt="Cr1t">
+						</picture>
+					</a>
+				</td>
+				<td style="vertical-align:top">
+					<h3>
+						<a style="display: flex; align-items: center;" class="nickh2" href="/dota-2/player/cr1t">
+							<span class="sm g">Support.</span>Cr1t
+							<img style="width: 20px; height: 20px; margin-left: 5px" src="https://game-tournaments.com/media/flags/24.svg">
+						</a>
+					</h3>
+					<ul>
+						<li>
+							<span class="sca" data-time="1744313400">вчера</span>
+							за
+							<a href="/dota-2/team/falcons">FLCN</a>
+							vs
+							<a href="/dota-2/team/spirit">TSpirit</a>
+						</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td align="center">
+					<a class="tava" href="/dota-2/player/sneyking" title="Игрок команды Team Falcons - Sneyking">
+						<picture>
+							<source srcset="https://game-tournaments.com/media/logo/_60/p195.webp, https://game-tournaments.com/media/logo/_120/p195.webp 2x" type="image/webp">
+							<source srcset="https://game-tournaments.com/media/logo/_60/p195.png, https://game-tournaments.com/media/logo/_120/p195.png 2x">
+							<img class="teampick" src="https://game-tournaments.com/media/logo/_60/p195.png" alt="Sneyking">
+						</picture>
+					</a>
+				</td>
+				<td style="vertical-align:top">
+					<h3>
+						<a style="display: flex; align-items: center;" class="nickh2" href="/dota-2/player/sneyking">
+							<span class="sm g">Support.</span>Sneyking
+							<img style="width: 20px; height: 20px; margin-left: 5px" src="https://game-tournaments.com/media/flags/2.svg">
+						</a>
+					</h3>
+					<ul>
+						<li>
+							<span class="sca" data-time="1744313400">вчера</span>
+							за
+							<a href="/dota-2/team/falcons">FLCN</a>
+							vs
+							<a href="/dota-2/team/spirit">TSpirit</a>
+						</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" style="background:#1e333d">
+					<h4 class="text-center">Другие игроки</h4>
+				</td>
+			</tr>
+			<tr class="ssost">
+				<td align="center">
+					<a class="tava" href="/dota-2/player/cc-c" title="Игрок команды Team Falcons - Quinn">
+						<picture>
+							<source srcset="https://game-tournaments.com/media/logo/_60/p8366.webp, https://game-tournaments.com/media/logo/_120/p8366.webp 2x" type="image/webp">
+							<source srcset="https://game-tournaments.com/media/logo/_60/p8366.png, https://game-tournaments.com/media/logo/_120/p8366.png 2x">
+							<img class="teampick" src="https://game-tournaments.com/media/logo/_60/p8366.png" alt="Quinn">
+						</picture>
+					</a>
+				</td>
+				<td style="vertical-align:top">
+					<h3>
+						<a style="display: flex; align-items: center;" class="nickh2" href="/dota-2/player/cc-c">
+							<span class="sm g">Mid.</span>Quinn
+							<img style="width: 20px; height: 20px; margin-left: 5px" src="https://game-tournaments.com/media/flags/2.svg">
+						</a>
+					</h3>
+					<ul>
+						<li>
+							<span class="sca" data-time="1744313400">вчера</span>
+							за
+							<a href="/dota-2/team/falcons">FLCN</a>
+							vs
+							<a href="/dota-2/team/spirit">TSpirit</a>
+						</li>
+					</ul>
+				</td>
+			</tr>
+			<tr class="ssost">
+				<td align="center">
+					<a class="tava" href="/dota-2/player/sumail" title="Игрок команды Team Falcons - Sumail">
+						<picture>
+							<source srcset="https://game-tournaments.com/media/logo/_60/p463.webp, https://game-tournaments.com/media/logo/_120/p463.webp 2x" type="image/webp">
+							<source srcset="https://game-tournaments.com/media/logo/_60/p463.png, https://game-tournaments.com/media/logo/_120/p463.png 2x">
+							<img class="teampick" src="https://game-tournaments.com/media/logo/_60/p463.png" alt="Sumail">
+						</picture>
+					</a>
+				</td>
+				<td style="vertical-align:top">
+					<h3>
+						<a style="display: flex; align-items: center;" class="nickh2" href="/dota-2/player/sumail">
+							<span class="sm g">Mid.</span>Sumail
+							<img style="width: 20px; height: 20px; margin-left: 5px" src="https://game-tournaments.com/media/flags/59.svg">
+						</a>
+					</h3>
+					<ul>
+						<li>
+							<span class="sca" data-time="1740662700">1мес. назад</span>
+							за
+							<a href="/dota-2/team/falcons">FLCN</a>
+							vs
+							<a href="/dota-2/team/tundra">Tundra</a>
+						</li>
+					</ul>
+				</td>
+			</tr>
+			<tr class="ssost">
+				<td align="center">
+					<a class="tava" href="/dota-2/player/nine" title="Игрок команды Team Falcons - nine">
+						<picture>
+							<source srcset="https://game-tournaments.com/media/logo/_60/p8236.webp, https://game-tournaments.com/media/logo/_120/p8236.webp 2x" type="image/webp">
+							<source srcset="https://game-tournaments.com/media/logo/_60/p8236.png, https://game-tournaments.com/media/logo/_120/p8236.png 2x">
+							<img class="teampick" src="https://game-tournaments.com/media/logo/_60/p8236.png" alt="nine">
+						</picture>
+					</a>
+				</td>
+				<td style="vertical-align:top">
+					<h3>
+						<a style="display: flex; align-items: center;" class="nickh2" href="/dota-2/player/nine">
+							<span class="sm g">Mid.</span>nine
+							<img style="width: 20px; height: 20px; margin-left: 5px" src="https://game-tournaments.com/media/flags/5.svg">
+						</a>
+					</h3>
+					<ul>
+						<li>
+							<span class="sca" data-time="1716105540">10мес. назад</span>
+							за
+							<a href="/dota-2/team/falcons">FLCN</a>
+							vs
+							<a href="/dota-2/team/spirit">TSpirit</a>
+						</li>
+					</ul>
+				</td>
+			</tr>
+			<tr class="ssost">
+				<td align="center">
+					<a class="tava" href="/dota-2/player/fishman" title="Игрок команды Team Falcons - Fishman">
+						<picture>
+							<source srcset="https://game-tournaments.com/media/logo/_60/p23308.webp, https://game-tournaments.com/media/logo/_120/p23308.webp 2x" type="image/webp">
+							<source srcset="https://game-tournaments.com/media/logo/_60/p23308.png, https://game-tournaments.com/media/logo/_120/p23308.png 2x">
+							<img class="teampick" src="https://game-tournaments.com/media/logo/_60/p23308.png" alt="Fishman">
+						</picture>
+					</a>
+				</td>
+				<td style="vertical-align:top">
+					<h3>
+						<a style="display: flex; align-items: center;" class="nickh2" href="/dota-2/player/fishman">
+							<span class="sm g">Support.</span>Fishman
+							<img style="width: 20px; height: 20px; margin-left: 5px" src="https://game-tournaments.com/media/flags/12.svg">
+						</a>
+					</h3>
+					<ul>
+						<li>
+							<span class="sca" data-time="1701878460">1г назад</span>
+							за
+							<a href="/dota-2/team/falcons">FLCN</a>
+							vs
+							<a href="/dota-2/team/the-dudley-boyz">Tdb</a>
+						</li>
+					</ul>
+				</td>
+			</tr>
+			<tr class="ssost">
+				<td align="center">
+					<a class="tava" href="/dota-2/player/biziem" title="Игрок команды Team Falcons - bzm">
+						<picture>
+							<source srcset="https://game-tournaments.com/media/logo/_60/p82154.webp, https://game-tournaments.com/media/logo/_120/p82154.webp 2x" type="image/webp">
+							<source srcset="https://game-tournaments.com/media/logo/_60/p82154.png, https://game-tournaments.com/media/logo/_120/p82154.png 2x">
+							<img class="teampick" src="https://game-tournaments.com/media/logo/_60/p82154.png" alt="bzm">
+						</picture>
+					</a>
+				</td>
+				<td style="vertical-align:top">
+					<h3>
+						<a style="display: flex; align-items: center;" class="nickh2" href="/dota-2/player/biziem">
+							<span class="sm g">Mid.</span>bzm
+							<img style="width: 20px; height: 20px; margin-left: 5px" src="https://game-tournaments.com/media/flags/20.svg">
+						</a>
+					</h3>
+					<ul>
+						<li>
+							<span class="sca" data-time="1701176400">1г назад</span>
+							за
+							<a href="/dota-2/team/falcons">FLCN</a>
+							vs
+							<a href="/dota-2/team/yellow-submarine">YeS</a>
+						</li>
+					</ul>
+				</td>
+			</tr>
+
+		</tbody>
+	</table>
+</div>
+
+
+									<a class="dynban sq" href="https://escorenews.com/ru/dota-2/news/59098-nix-rasskazal-chto-otkazalsya-ot-soten-millionov-rubley-za-reklamu-kazino?utm_source=www&amp;utm_medium=news&amp;utm_campaign=7&amp;utm_content=n59098" target="_blank">
+    <span class="d_img" style="background-image: url(https://escorenews.com/media/news/n59098.jpeg);"></span>
+    <span class="d_logo"></span>
+    <span class="d_txt">
+        <span class="d_hdr">
+            Nix рассказал, что отказался от «сотен миллионов рублей» за рекламу казино
+        </span>
+        <span class="d_prvw">Стример Dota 2 Александр «Nix» Левин рассказал, какие деньги предлагали ему за рекламу казино. Он признался,...</span>
+    </span>
+    <span class="d_btn">
+        <u>
+            <b>Читать</b>
+        </u>
+    </span>
+</a>
+
+									<div class="box livebet lsoon-div lsoon-div-2">
+										<a href="/go?n=770" target="_blank">
+											<img src="https://game-tournaments.com/media/a/banner1097.gif" class="yaadstracker" id="trck_770">
+										</a>
+									</div>
+									<style>
+										@media(max-width: 990px) {
+											.lsoon-div-2 {
+												display: none;
+											}
+										}
+									</style>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<footer class="footer">
+	<div class="">
+		<div class="fgame">
+			<ul>
+				<li><a href="/dota-2"><img src="https://game-tournaments.com/assets/img/game_582.png" alt="DOTA 2" class="png"></a></li>
+				<li><a href="/csgo"><img src="https://game-tournaments.com/assets/img/game_704.png" alt="CS 2, Counter-Strike" class="png"></a></li>
+				<li><a href="/hearthstone"><img src="https://game-tournaments.com/assets/img/game_755.png" alt="HearthStone" class="png"></a></li>
+				<li><a href="/lol"><img src="https://game-tournaments.com/assets/img/game_313.png" alt="League of Legends" class="png"></a></li>
+				<li><a href="/overwatch"><img src="https://game-tournaments.com/assets/img/game_800.png" alt="Overwatch" class="png"></a></li>
+			</ul>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-md-2">
+				<a
+					href="/" class="f_logo">
+					<!--<img src="https://game-tournaments.com/assets/img/gtlogo1.png" alt="Game-Tournaments" class="png"/>-->
+					<img src="https://game-tournaments.com/assets/img/logo_gt_footer.png" alt="Game-Tournaments" class="logo_gt_footer png">
+				</a>
+				<copy></copy>
+			</div>
+			<div class="col-md-8">
+				<ul class="f_menu">
+					<li>Dota 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/</li>
+					<li>
+						<a href="/dota-2/matches">Матчи</a>
+					</li>
+					<li>
+						<a href="/dota-2/tournaments">Турниры</a>
+					</li>
+					<li>
+						<a href="/dota-2/news">Новости</a>
+					</li>
+					<li>
+						<a href="/dota-2/team">Команды</a>
+					</li>
+					<li>
+						<a href="/dota-2/player">Игроки</a>
+					</li>
+					<li>
+						<a href="/dota-2/bets">Ставки</a>
+					</li>
+					<li>
+						<a href="/dota-2/video">Видео</a>
+					</li>
+				</ul>
+				<ul class="f_menu">
+					<li>
+						<a href="/about">О проекте</a>
+					</li>
+					<li>
+						<a href="/rules">Правила</a>
+					</li>
+					<li>
+						<a href="/ads">Реклама</a>
+					</li>
+					<li>
+						<a href="/partner">Партнеры</a>
+					</li>
+				</ul>
+			</div>
+			<div
+				class="col-md-2">
+				<!--<div class="f_soc pull-right">
+									<a target="_blank" href="/go?url=https://vk.com/gt_com"><i class="fa fa-fw fa-vk"></i></a>
+				                    <a target="_blank" href="/go?url=https://twitter.com/GTcom_"><i class="fa fa-fw fa-twitter"></i></a>
+								</div>-->
+				<img src="https://game-tournaments.com/assets/img/logo_gt_footer2.png" alt="Game-Tournaments" class="logo_gt_footer2 png">
+			</div>
+		</div>
+		<div class="f_credits">
+			<span>game-tournaments.com is operated by GAMEAGEVENTURES LLP, a legal entity registered in United Kingdom, having its registered office at: Sidney Street, Folkestone, Kent, CT19 6HQ, UK; Company No. OC391978.</span>
+		</div>
+	</div>
+</footer>
+
+			
+<!-- Site Sripts -->
+<script src="./inc/main.js"></script>
+
+<script>
+            var lang = 'ru';
+            				var tz = new Date().getTimezoneOffset()*(-1);
+			            var timezone = [];
+			var utime = tz*60;
+			var stime = 1742192454;
+			var game_id = 582;
+            var game_eng = 'dota-2';
+            var mscores = {};
+            var i18n = {
+			    'y':'г',
+			    'mes':'мес.',
+			    'w':'н',
+			    'd':'д',
+			    'h':'ч',
+			    'm':'м',
+			    's':'с',
+			    'ago':'назад',
+				'today':'сегодня',
+			    'yesterday':'вчера',
+			    'money_format':'{"6":"M","3":"K"}',
+				'acc_timezone':'Часовой пояс',
+			    'bets_wms': 'Коэффициенты / Прогнозы',
+			    'pr_wms': 'Информация',
+			    'month':'января,февраля,марта,апреля,мая,июня,июля,августа,сентября,октября,ноября,декабря'.split(','),
+			    'month2':'январь,февраль,март,апрель,май,июнь,июль,август,сентябрь,октябрь,ноябрь,декабрь'.split(','),
+			    'timezone':jQuery.parseJSON('[{"t":"UTC -12:00","s":"","d":-720},{"t":"UTC -11:00","s":"","d":-660},{"t":"UTC -10:00","s":"","d":-600},{"t":"UTC -9:00","s":"","d":-540},{"t":"UTC -8:00","s":"PST","d":-480},{"t":"UTC -7:00","s":"PDT","d":-420},{"t":"UTC -6:00","s":"CST","d":-360},{"t":"UTC -5:00","s":"EST","d":-300},{"t":"UTC -4:00","s":"EDT","d":-240},{"t":"UTC -3:30","s":"","d":-210},{"t":"UTC -3:00","s":"CLST","d":-180},{"t":"UTC -2:00","s":"","d":-120},{"t":"UTC -1:00","s":"","d":-60},{"t":"UTC +0:00","s":"","d":0},{"t":"UTC +1:00","s":"CET","d":60},{"t":"UTC +2:00","s":"CEST","d":120},{"t":"UTC +3:00","s":"MSK","d":180},{"t":"UTC +3:30","s":"","d":210},{"t":"UTC +4:00","s":"","d":240},{"t":"UTC +4:30","s":"","d":270},{"t":"UTC +5:00","s":"","d":300},{"t":"UTC +5:30","s":"","d":330},{"t":"UTC +6:00","s":"","d":360},{"t":"UTC +7:00","s":"","d":420},{"t":"UTC +8:00","s":"SGT","d":480},{"t":"UTC +9:00","s":"","d":540},{"t":"UTC +9:30","s":"","d":570},{"t":"UTC +10:00","s":"","d":600},{"t":"UTC +11:00","s":"","d":660},{"t":"UTC +12:00","s":"","d":720}]'),
+				'tournament_none':'Подходящих турниров не найдено',
+			    'tournament_pick':'Выбери турнир',
+			    'team_no_found':'Подходящих команд не найдено',
+			    'team_pick':'Выбери команду',
+			    'player_no_found':'Подходящих игроков не найдено',
+			    'hero_no':'Подходящих героев не найдено',
+			    'hero_pick':'Выбери героя',
+			    'player_pick':'Выбери игрока',
+			    'login_title':'Вход',
+			    'reg_title':'Регистрация',
+                'date_format':'%j% %m%%y%, %h%:%i%'
+		    };
+</script>
+
+<script src="https://game-tournaments.com/inc/bootstrap.min.js"></script>
+<script src="https://game-tournaments.com/inc/func.js?5"></script>
+<script src="https://game-tournaments.com/inc/fancybox2/jquery.fancybox.pack.js?v=2.1.3"></script>
+<script src="https://game-tournaments.com/inc/fancybox2/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<script src="https://game-tournaments.com/inc/jquery.trackpad-scroll-emulator.min.js"></script>
+<script src="https://game-tournaments.com/inc/perfect-scrollbar.jquery.js"></script>
+<script>
+        page_match = 1;
+        function mvideo(num) {
+            $.ajax({type:'POST',data:{game:game_eng,rid:'matches',ajax:'block_video',data:{id:598095,'num':num}}}).done(function(txt){
+                $('#video').html(txt);
+                $('#videos li').removeClass('active');
+                $('#videos li[rel='+num+']').addClass('active');
+                if ($('#gvlist').length) {
+                	$('#gvlist').TrackpadScrollEmulator({autoHide: false});
+                }
+                mvideo_top();
+            });
+        }
+        function mvideo_top() {
+            var kol = $('#video a.video').length;
+            if ($('#video a.g-rezults').length) kol += 1;
+            if ($('#video a.g-d2m').length) kol += 1;
+            var top = (kol > 3 ? 120 : 200 - kol*20);
+            $('#video .gamevid').css({'top':top+'px'});
+        }
+        function match_result(num) {
+          debugger
+          wms('Результаты игры','data');
+            //$.ajax({type:'POST',data:{game:game_eng,rid:'matches',ajax:'match_result',data:{'mid':598095,'num':num}}}).done(function(txt) {
+        		//wms('Результаты игры',txt);
+        	  //});
+        }
+        $(document).ready(function() {
+            mvideo_top();
+            $('.btxt').on('contextmenu', function(e){
+                e.preventDefault();
+            });
+            $('.fancybox').fancybox();
+        	$('.video').fancybox({
+        		arrows : false,
+        		helpers: {
+                    media: true
+                }
+        	});
+        	if ($('#gvlist').length) {
+            	$('#gvlist').TrackpadScrollEmulator({autoHide: false});
+            }
+			
+			$('.match-nav').perfectScrollbar();
+			
+        });
+    </script>
+
+
+<div class="modal fade" id="wms" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content"></div>
+	</div>
+</div>
+
+
+<!--PAGES select only dev-->
+<style>
+  .project-menu {
+    position: fixed;
+    z-index: 1000;
+    bottom: 5px;
+    left: 5px;
+  }
+</style>
+<div class="project-menu">
+  <div class="btn-group" role="group" id="hpages">
+    <div class="dropup">
+      <button class="btn btn-default btn-sm dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Страницы
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./external.html">external</a></li>
+        <li><a href="./match-result-table.html">match-result-table</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!--.STYLE CHANGE dev-->
+<!--.PAGES navi dev-->
+
+
+			<link rel="stylesheet" href="assets/css/block-team-result.css"/>
+
+		</div>
+	</body>
+
+	<style>
+		#wrapper {
+			padding-left: 60px;
+			transition: all 0.5s ease 0s;
+		}
+		.pagebg {
+			background: #222 0 0;
+			padding: 5px;
+		}
+	</style>
+</html>
